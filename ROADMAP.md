@@ -6,38 +6,38 @@ Core paling bawah. Semua hidup dari sini.
 
 ## Core Event System
 
-* [ ] Event loop abstraction
-* [ ] Deferred task queue
+* [x] Event loop abstraction
+* [x] Deferred task queue
 * [ ] Microtask queue
-* [ ] Tick scheduler
-* [ ] Timer system
+* [x] Tick scheduler
+* [x] Timer system
 * [ ] Idle callback scheduler
-* [ ] Signal handling
-* [ ] Graceful shutdown lifecycle
+* [x] Signal handling
+* [x] Graceful shutdown lifecycle
 
 ## Worker Runtime
 
-* [ ] Worker bootstrap
-* [ ] Worker supervisor
-* [ ] Worker restart strategy
+* [x] Worker bootstrap
+* [x] Worker supervisor
+* [x] Worker restart strategy
 * [ ] Worker generations
-* [ ] Worker drain mode
-* [ ] Cross-worker communication
-* [ ] Shared metrics aggregation
+* [x] Worker drain mode
+* [x] Cross-worker communication
+* [x] Shared metrics aggregation
 * [ ] Runtime hot reload research
 
 ## Memory & Lifecycle
 
-* [ ] Ownership model
-* [ ] Borrowed object lease
-* [ ] Lifecycle contracts
-* [ ] Cleanup contracts
-* [ ] Pool safety guard
-* [ ] Context contamination detection
-* [ ] WeakMap retained object tracking
-* [ ] Runtime leak audit mode
+* [x] Ownership model
+* [x] Borrowed object lease
+* [x] Lifecycle contracts
+* [x] Cleanup contracts
+* [x] Pool safety guard
+* [x] Context contamination detection
+* [x] WeakMap retained object tracking
+* [x] Runtime leak audit mode
 * [ ] GC pressure metrics
-* [ ] Memory pressure mode
+* [x] Memory pressure mode
 
 ---
 
@@ -47,17 +47,17 @@ Layer abstraction untuk semua runtime mode.
 
 ## Runtime Modes
 
-* [ ] Stateless runtime
-* [ ] Stateful runtime
-* [ ] Realtime runtime
-* [ ] Streaming runtime
-* [ ] Hybrid runtime mode
+* [x] Stateless runtime
+* [x] Stateful runtime
+* [x] Realtime runtime
+* [x] Streaming runtime
+* [x] Hybrid runtime mode
 
 ## Scheduler Isolation
 
-* [ ] REST scheduler
-* [ ] WS scheduler
-* [ ] SSE scheduler
+* [x] REST scheduler
+* [x] WS scheduler
+* [x] SSE scheduler
 * [ ] Background task scheduler
 * [ ] Priority queue scheduling
 * [ ] Fair scheduling
@@ -65,13 +65,13 @@ Layer abstraction untuk semua runtime mode.
 
 ## Backpressure System
 
-* [ ] Connection backpressure
-* [ ] Stream backpressure
-* [ ] Queue pressure handling
-* [ ] Adaptive throttling
-* [ ] Slow consumer detection
-* [ ] Auto drop strategy
-* [ ] Runtime pressure controller
+* [x] Connection backpressure
+* [x] Stream backpressure
+* [x] Queue pressure handling
+* [x] Adaptive throttling
+* [x] Slow consumer detection
+* [x] Auto drop strategy
+* [x] Runtime pressure controller
 
 ---
 
@@ -79,23 +79,23 @@ Layer abstraction untuk semua runtime mode.
 
 ## HTTP Core
 
-* [ ] HTTP parser
-* [ ] Router
-* [ ] Middleware pipeline
-* [ ] Route groups
-* [ ] Context/request container
-* [ ] Streaming response
+* [x] HTTP parser
+* [x] Router
+* [x] Middleware pipeline
+* [x] Route groups
+* [x] Context/request container
+* [x] Streaming response
 * [ ] Chunked transfer
-* [ ] Keep-alive management
-* [ ] Compression
-* [ ] Static file serving
+* [x] Keep-alive management
+* [x] Compression
+* [x] Static file serving
 
 ## HTTP Performance
 
 * [ ] Route cache
-* [ ] Response pooling
-* [ ] Header optimization
-* [ ] Fast path responses
+* [x] Response pooling
+* [x] Header optimization
+* [x] Fast path responses
 * [ ] Zero-copy experiments
 * [ ] APCu route metadata cache
 
@@ -105,21 +105,21 @@ Layer abstraction untuk semua runtime mode.
 
 ## WS Core
 
-* [ ] WS handshake
-* [ ] Frame parser
-* [ ] Connection manager
-* [ ] Channel/pubsub system
-* [ ] Broadcast engine
-* [ ] Heartbeat/ping system
-* [ ] Disconnect cleanup
+* [x] WS handshake
+* [x] Frame parser
+* [x] Connection manager
+* [x] Channel/pubsub system
+* [x] Broadcast engine
+* [x] Heartbeat/ping system
+* [x] Disconnect cleanup
 
 ## WS Scaling
 
-* [ ] Cross-worker WS bus
-* [ ] WS backpressure
-* [ ] Slow socket isolation
-* [ ] Message batching
-* [ ] Topic partitioning
+* [x] Cross-worker WS bus
+* [x] WS backpressure
+* [x] Slow socket isolation
+* [x] Message batching
+* [x] Topic partitioning
 * [ ] Distributed WS gateway research
 
 ---
@@ -128,19 +128,19 @@ Layer abstraction untuk semua runtime mode.
 
 ## SSE Core
 
-* [ ] Event stream manager
-* [ ] Heartbeat system
-* [ ] Stream cleanup
-* [ ] Chunk flushing
-* [ ] Retry support
-* [ ] Event id support
+* [x] Event stream manager
+* [x] Heartbeat system
+* [x] Stream cleanup
+* [x] Chunk flushing
+* [x] Retry support
+* [x] Event id support
 
 ## SSE Isolation
 
-* [ ] SSE scheduler
-* [ ] Stream buffer control
-* [ ] Slow stream detection
-* [ ] SSE broadcast channels
+* [x] SSE scheduler
+* [x] Stream buffer control
+* [x] Slow stream detection
+* [x] SSE broadcast channels
 
 ---
 
@@ -148,23 +148,23 @@ Layer abstraction untuk semua runtime mode.
 
 ## Metrics
 
-* [ ] HTTP metrics
-* [ ] WS metrics
-* [ ] SSE metrics
-* [ ] Runtime loop lag
-* [ ] Worker metrics
-* [ ] Queue metrics
-* [ ] Pool metrics
-* [ ] Ownership metrics
-* [ ] Leak metrics
+* [x] HTTP metrics
+* [x] WS metrics
+* [x] SSE metrics
+* [x] Runtime loop lag
+* [x] Worker metrics
+* [x] Queue metrics
+* [x] Pool metrics
+* [x] Ownership metrics
+* [x] Leak metrics
 
 ## Diagnostics
 
-* [ ] Runtime inspector
+* [x] Runtime inspector
 * [ ] Connection inspector
 * [ ] Object tracker dashboard
 * [ ] Runtime profiling mode
-* [ ] Debug tracing
+* [x] Debug tracing
 * [ ] Runtime snapshots
 
 ---
@@ -173,7 +173,7 @@ Layer abstraction untuk semua runtime mode.
 
 ## Native Loader
 
-* [ ] Nexph autoloader
+* [x] Nexph autoloader
 * [ ] Runtime preload
 * [ ] Lazy module resolver
 * [ ] Runtime package metadata
@@ -199,20 +199,20 @@ Express-like philosophy
 
 ## Minimal API
 
-* [ ] Route API
-* [ ] Middleware API
-* [ ] Context API
-* [ ] Runtime hooks
-* [ ] Event hooks
+* [x] Route API
+* [x] Middleware API
+* [x] Context API
+* [x] Runtime hooks
+* [x] Event hooks
 * [ ] Plugin system
 
 ## Flexible Patterns
 
-* [ ] MVC optional
-* [ ] Functional routing
-* [ ] Modular apps
+* [x] MVC optional
+* [x] Functional routing
+* [x] Modular apps
 * [ ] Service container optional
-* [ ] Event-driven modules
+* [x] Event-driven modules
 
 ---
 
@@ -222,18 +222,18 @@ Express-like philosophy
 
 * [ ] `nexph serve`
 * [ ] `nexph ws:start`
-* [ ] `nexph runtime:stats`
-* [ ] `nexph worker:list`
+* [x] `nexph runtime:stats`
+* [x] `nexph worker:list`
 * [ ] `nexph inspect`
 * [ ] `nexph benchmark`
 
 ## Dev Tools
 
-* [ ] Runtime dashboard
-* [ ] Live metrics UI
-* [ ] Hot reload experiments
+* [x] Runtime dashboard
+* [x] Live metrics UI
+* [x] Hot reload experiments
 * [ ] Runtime tracing
-* [ ] Debug mode
+* [x] Debug mode
 
 ---
 
@@ -243,11 +243,11 @@ Express-like philosophy
 
 * [ ] Fiber scheduler optimization
 * [ ] Runtime JIT experiments
-* [ ] Async filesystem
+* [x] Async filesystem
 * [ ] Async DB drivers
 * [ ] Runtime snapshots
 * [ ] Distributed runtime clustering
-* [ ] Runtime-native queue engine
+* [x] Runtime-native queue engine
 
 ## Native Experiments
 
@@ -259,31 +259,18 @@ Express-like philosophy
 
 ---
 
-# Suggested Priority 
-
-| Priority | Focus                       |
-| -------- | --------------------------- |
-| P0     | runtime kernel + lifecycle  |
-| P1     | HTTP/WS/SSE stable runtime  |
-| P2     | observability + diagnostics |
-| P3     | loader/module ecosystem     |
-| P4     | framework layer             |
-| P5     | distributed/native research |
-
----
-
 # 11. Nexph UI / FE Runtime 
 
 ## Frontend Runtime Core
 
-* [ ] Reactive state engine
+* [x] Reactive state engine
 * [ ] Signal system
 * [ ] Fine-grained reactivity
-* [ ] Component lifecycle
-* [ ] Effect scheduler
-* [ ] DOM renderer
+* [x] Component lifecycle
+* [x] Effect scheduler
+* [x] DOM renderer
 * [ ] Diffing strategy research
-* [ ] Event delegation
+* [x] Event delegation
 
 ---
 
@@ -293,7 +280,7 @@ Express-like philosophy
 
 * [ ] Runtime state sync
 * [ ] Server signal sync
-* [ ] Shared reactive store
+* [x] Shared reactive store
 * [ ] Direct WS state bridge
 * [ ] SSE reactive stream
 * [ ] Auto hydration
@@ -308,9 +295,9 @@ Express-like philosophy
 ## UI Layer
 
 * [ ] JSX-like syntax research
-* [ ] Template compiler
-* [ ] Native component system
-* [ ] SSR support
+* [x] Template compiler
+* [x] Native component system
+* [x] SSR support
 * [ ] Streaming SSR
 * [ ] Islands architecture
 * [ ] Partial hydration
@@ -318,10 +305,10 @@ Express-like philosophy
 
 ## UI Runtime
 
-* [ ] Client runtime
+* [x] Client runtime
 * [ ] Shared server/client context
-* [ ] Runtime navigation
-* [ ] Reactive router
+* [x] Runtime navigation
+* [x] Reactive router
 * [ ] Suspense-like async boundary
 
 ---
