@@ -1,0 +1,114 @@
+{
+    "defaults": {
+        "enabled": true,
+        "auth": true,
+        "roles": [],
+        "max_limit": 100,
+        "endpoints": []
+    },
+    "tables": {
+        "rate_limits": {
+            "enabled": true,
+            "auth": true,
+            "roles": [],
+            "endpoints": {
+                "list": {
+                    "enabled": true,
+                    "auth": true,
+                    "roles": []
+                },
+                "detail": {
+                    "enabled": true,
+                    "auth": true,
+                    "roles": []
+                },
+                "create": {
+                    "enabled": true,
+                    "auth": true,
+                    "roles": []
+                },
+                "update": {
+                    "enabled": true,
+                    "auth": true,
+                    "roles": []
+                },
+                "delete": {
+                    "enabled": true,
+                    "auth": true,
+                    "roles": []
+                }
+            },
+            "max_limit": 100
+        },
+        "task": {
+            "enabled": true,
+            "auth": true,
+            "roles": [],
+            "endpoints": {
+                "list": {
+                    "enabled": true,
+                    "auth": false,
+                    "roles": []
+                },
+                "detail": {
+                    "enabled": true,
+                    "auth": true,
+                    "roles": []
+                },
+                "create": {
+                    "enabled": true,
+                    "auth": true,
+                    "roles": []
+                },
+                "update": {
+                    "enabled": true,
+                    "auth": true,
+                    "roles": []
+                },
+                "delete": {
+                    "enabled": true,
+                    "auth": true,
+                    "roles": []
+                }
+            },
+            "max_limit": 100
+        },
+        "users": {
+            "enabled": true,
+            "auth": true,
+            "roles": [],
+            "endpoints": {
+                "list": {
+                    "enabled": true,
+                    "auth": true,
+                    "roles": [
+                        "admin"
+                    ]
+                },
+                "detail": {
+                    "enabled": false,
+                    "auth": true,
+                    "roles": [
+                        "admin"
+                    ]
+                },
+                "create": {
+                    "enabled": false,
+                    "auth": true,
+                    "roles": []
+                },
+                "update": {
+                    "enabled": false,
+                    "auth": true,
+                    "roles": []
+                },
+                "delete": {
+                    "enabled": false,
+                    "auth": true,
+                    "roles": []
+                }
+            },
+            "max_limit": 100
+        }
+    }
+}

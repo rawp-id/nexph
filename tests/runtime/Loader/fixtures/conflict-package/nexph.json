@@ -1,0 +1,7 @@
+{
+    "name": "test/conflict-package",
+    "version": "1.0.0",
+    "type": "module",
+    "conflicts": {"test/valid-package": "*"},
+    "requires": {}
+}

@@ -1,0 +1,177 @@
+{
+    "table": "task",
+    "fillable": [
+        "task",
+        "user_id",
+        "description"
+    ],
+    "hidden": [
+        "json",
+        "date",
+        "datetime",
+        "file",
+        "pilihan"
+    ],
+    "casts": {
+        "json": "json",
+        "date": "datetime",
+        "datetime": "datetime"
+    },
+    "indexes": [
+        {
+            "name": "idx_user_id",
+            "columns": [
+                "user_id"
+            ],
+            "unique": false
+        }
+    ],
+    "fields": [
+        {
+            "name": "id",
+            "type": "INTEGER",
+            "length": "",
+            "default": "",
+            "nullable": false,
+            "unique": false,
+            "primary": true,
+            "autoincrement": true,
+            "references": {
+                "table": "",
+                "column": ""
+            }
+        },
+        {
+            "name": "task",
+            "type": "TEXT",
+            "length": "",
+            "default": "",
+            "nullable": false,
+            "unique": false,
+            "primary": false,
+            "autoincrement": false,
+            "references": {
+                "table": "",
+                "column": ""
+            }
+        },
+        {
+            "name": "user_id",
+            "type": "TEXT",
+            "length": "",
+            "default": "",
+            "nullable": false,
+            "unique": false,
+            "primary": false,
+            "autoincrement": false,
+            "references": {
+                "table": "users",
+                "column": "id"
+            }
+        },
+        {
+            "name": "description",
+            "type": "TEXT",
+            "length": "",
+            "default": "",
+            "nullable": true,
+            "unique": false,
+            "primary": false,
+            "autoincrement": false,
+            "references": {
+                "table": "",
+                "column": ""
+            }
+        },
+        {
+            "name": "json",
+            "type": "JSON",
+            "length": "",
+            "default": "",
+            "nullable": true,
+            "unique": false,
+            "primary": false,
+            "autoincrement": false,
+            "references": {
+                "table": "",
+                "column": ""
+            }
+        },
+        {
+            "name": "date",
+            "type": "DATE",
+            "length": "",
+            "default": "",
+            "nullable": true,
+            "unique": false,
+            "primary": false,
+            "autoincrement": false,
+            "references": {
+                "table": "",
+                "column": ""
+            }
+        },
+        {
+            "name": "datetime",
+            "type": "DATETIME",
+            "length": "",
+            "default": "",
+            "nullable": true,
+            "unique": false,
+            "primary": false,
+            "autoincrement": false,
+            "references": {
+                "table": "",
+                "column": ""
+            }
+        },
+        {
+            "name": "file",
+            "type": "BLOB",
+            "length": "",
+            "default": "",
+            "nullable": true,
+            "unique": false,
+            "primary": false,
+            "autoincrement": false,
+            "references": {
+                "table": "",
+                "column": ""
+            }
+        },
+        {
+            "name": "pilihan",
+            "type": "ENUM",
+            "length": "",
+            "default": "",
+            "nullable": true,
+            "unique": false,
+            "primary": false,
+            "autoincrement": false,
+            "references": {
+                "table": "",
+                "column": ""
+            }
+        },
+        {
+            "name": "created_at",
+            "type": "DATETIME",
+            "default": "CURRENT_TIMESTAMP",
+            "nullable": true,
+            "references": {
+                "table": "",
+                "column": ""
+            }
+        },
+        {
+            "name": "updated_at",
+            "type": "DATETIME",
+            "default": "CURRENT_TIMESTAMP",
+            "nullable": true,
+            "references": {
+                "table": "",
+                "column": ""
+            }
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "name": "nexph/cache",
+    "version": "0.1.0",
+    "type": "module",
+    "description": "Cache manager with APCu, file, and Redis drivers",
+    "license": "MIT",
+    "requires": {
+        "nexph/backend-engine": ">=0.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Core\\Cache\\": "src/"
+        }
+    },
+    "providers": [],
+    "config": {
+        "cache": "config/cache.php"
+    }
+}

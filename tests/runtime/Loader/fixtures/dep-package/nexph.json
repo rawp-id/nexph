@@ -1,0 +1,6 @@
+{
+    "name": "test/dep-package",
+    "version": "1.0.0",
+    "type": "module",
+    "requires": {"test/valid-package": "^1.0.0"}
+}

@@ -1,0 +1,20 @@
+{
+    "name": "nexph/nexph",
+    "version": "0.1.0",
+    "type": "app",
+    "description": "Nexph Runtime - Stateful PHP HTTP/WS/SSE server + frontend compiler",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Core\\": "src/",
+            "Nexph\\": "ui/"
+        }
+    },
+    "requires": {},
+    "scripts": {
+        "serve": "php runtime/server/serve.php",
+        "dev": "php bin/nexph dev",
+        "test": "php tests/runtime/Loader/LoaderTest.php && php tests/runtime/Loader/SemverTest.php"
+    },
+    "bin": "bin/nexph"
+}

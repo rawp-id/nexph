@@ -98,52 +98,52 @@ nexph/
 
 ## Phase 0 - Snapshot
 
-- [ ] Pastikan root git clean
-- [ ] Pastikan `backend-engine` git clean
-- [ ] Pastikan `frontend-engine` git clean
-- [ ] Catat commit hash root
-- [ ] Catat commit hash backend
-- [ ] Catat commit hash frontend
-- [ ] Catat file count backend
-- [ ] Catat file count frontend
-- [ ] Catat current benchmark commands
-- [ ] Catat current server commands
-- [ ] Catat current docs entrypoints
+- [x] Pastikan root git clean
+- [x] Pastikan `backend-engine` git clean
+- [x] Pastikan `frontend-engine` git clean
+- [x] Catat commit hash root
+- [x] Catat commit hash backend
+- [x] Catat commit hash frontend
+- [x] Catat file count backend
+- [x] Catat file count frontend
+- [x] Catat current benchmark commands
+- [x] Catat current server commands
+- [x] Catat current docs entrypoints
 
 ## Phase 1 - Create Root Skeleton
 
-- [ ] Buat `bin/`
-- [ ] Buat `src/`
-- [ ] Buat `src/Runtime/`
-- [ ] Buat `src/Runtime/Loader/`
-- [ ] Buat `src/Runtime/Package/`
-- [ ] Buat `src/Server/`
-- [ ] Buat `src/Http/`
-- [ ] Buat `src/Database/`
-- [ ] Buat `src/Queue/`
-- [ ] Buat `src/Event/`
-- [ ] Buat `src/Health/`
-- [ ] Buat `src/Log/`
-- [ ] Buat `src/Support/`
-- [ ] Buat `ui/`
-- [ ] Buat `runtime/`
-- [ ] Buat `runtime/server/`
-- [ ] Buat `runtime/fpm/`
-- [ ] Buat `runtime/workers/`
-- [ ] Buat `packages/`
-- [ ] Buat `modules/`
-- [ ] Buat `nexph_modules/`
-- [ ] Buat `scripts/benchmarks/`
-- [ ] Buat `scripts/smoke/`
-- [ ] Buat `examples/backend/`
-- [ ] Buat `examples/frontend/`
-- [ ] Buat `examples/fullstack/`
-- [ ] Buat `examples/packages/`
-- [ ] Buat `tests/runtime/`
-- [ ] Buat `tests/server/`
-- [ ] Buat `tests/http/`
-- [ ] Buat `tests/ui/`
-- [ ] Buat `tests/packages/`
+- [x] Buat `bin/`
+- [x] Buat `src/`
+- [x] Buat `src/Runtime/`
+- [x] Buat `src/Runtime/Loader/`
+- [x] Buat `src/Runtime/Package/`
+- [x] Buat `src/Server/`
+- [x] Buat `src/Http/`
+- [x] Buat `src/Database/`
+- [x] Buat `src/Queue/`
+- [x] Buat `src/Event/`
+- [x] Buat `src/Health/`
+- [x] Buat `src/Log/`
+- [x] Buat `src/Support/`
+- [x] Buat `ui/`
+- [x] Buat `runtime/`
+- [x] Buat `runtime/server/`
+- [x] Buat `runtime/fpm/`
+- [x] Buat `runtime/workers/`
+- [x] Buat `packages/`
+- [x] Buat `modules/`
+- [x] Buat `nexph_modules/`
+- [x] Buat `scripts/benchmarks/`
+- [x] Buat `scripts/smoke/`
+- [x] Buat `examples/backend/`
+- [x] Buat `examples/frontend/`
+- [x] Buat `examples/fullstack/`
+- [x] Buat `examples/packages/`
+- [x] Buat `tests/runtime/`
+- [x] Buat `tests/server/`
+- [x] Buat `tests/http/`
+- [x] Buat `tests/ui/`
+- [x] Buat `tests/packages/`
 
 ## Phase 2 - Backend Runtime Mapping
 
@@ -161,18 +161,18 @@ nexph/
 
 Tasks:
 
-- [ ] Copy `core/Runtime` to `src/Runtime`
-- [ ] Copy `core/Server` to `src/Server`
-- [ ] Copy `core/Http` to `src/Http`
-- [ ] Copy `core/Database` to `src/Database`
-- [ ] Copy `core/Queue` to `src/Queue`
-- [ ] Copy `core/Event` to `src/Event`
-- [ ] Copy `core/Health` to `src/Health`
-- [ ] Copy `core/Log` to `src/Log`
-- [ ] Copy `core/Support` to `src/Support`
-- [ ] Do not delete old backend files
-- [ ] Run PHP lint on copied runtime files
-- [ ] Compare file counts
+- [x] Copy `core/Runtime` to `src/Runtime`
+- [x] Copy `core/Server` to `src/Server`
+- [x] Copy `core/Http` to `src/Http`
+- [x] Copy `core/Database` to `src/Database`
+- [x] Copy `core/Queue` to `src/Queue`
+- [x] Copy `core/Event` to `src/Event`
+- [x] Copy `core/Health` to `src/Health`
+- [x] Copy `core/Log` to `src/Log`
+- [x] Copy `core/Support` to `src/Support`
+- [x] Do not delete old backend files
+- [x] Run PHP lint on copied runtime files
+- [x] Compare file counts
 
 ## Phase 3 - Backend Package Candidate Mapping
 
@@ -185,13 +185,13 @@ Tasks:
 
 Tasks:
 
-- [ ] Copy Auth package candidate
-- [ ] Copy Cache package candidate
-- [ ] Copy Generator package candidate
-- [ ] Copy UI package candidate
+- [x] Copy Auth package candidate
+- [x] Copy Cache package candidate
+- [x] Copy Generator package candidate
+- [x] Copy UI package candidate
 - [ ] Add placeholder package manifests later
-- [ ] Do not wire package loader yet
-- [ ] Do not delete old core package candidates
+- [x] Do not wire package loader yet
+- [x] Do not delete old core package candidates
 
 ## Phase 4 - Frontend Runtime Mapping
 
@@ -209,16 +209,16 @@ Tasks:
 
 Tasks:
 
-- [ ] Copy frontend runtime to `ui/`
-- [ ] Copy compiler to `ui/Compiler`
-- [ ] Copy builder to `ui/Builder`
-- [ ] Copy dev server to `ui/DevServer`
-- [ ] Copy devtools to `ui/DevTools`
-- [ ] Copy plugin system to `ui/Plugin`
-- [ ] Copy frontend autoload to `ui/Autoload`
-- [ ] Copy root frontend classes to `ui/`
-- [ ] Run PHP lint on copied UI files
-- [ ] Compare file counts
+- [x] Copy frontend runtime to `ui/`
+- [x] Copy compiler to `ui/Compiler`
+- [x] Copy builder to `ui/Builder`
+- [x] Copy dev server to `ui/DevServer`
+- [x] Copy devtools to `ui/DevTools`
+- [x] Copy plugin system to `ui/Plugin`
+- [x] Copy frontend autoload to `ui/Autoload`
+- [x] Copy root frontend classes to `ui/`
+- [x] Run PHP lint on copied UI files
+- [x] Compare file counts
 
 ## Phase 5 - Bootstrap Mapping
 
@@ -231,13 +231,13 @@ Tasks:
 
 Tasks:
 
-- [ ] Copy `serve.php`
-- [ ] Copy FPM index
-- [ ] Copy worker entry
-- [ ] Copy worker daemon entry
-- [ ] Update relative autoload paths in copied files
-- [ ] Do not change old files yet
-- [ ] Run syntax check
+- [x] Copy `serve.php`
+- [x] Copy FPM index
+- [x] Copy worker entry
+- [x] Copy worker daemon entry
+- [x] Update relative autoload paths in copied files
+- [x] Do not change old files yet
+- [x] Run syntax check
 
 ## Phase 6 - CLI Mapping
 
@@ -248,16 +248,16 @@ Tasks:
 
 Tasks:
 
-- [ ] Copy backend CLI to `bin/nexph`
-- [ ] Fix autoload path to root autoload
+- [x] Copy backend CLI to `bin/nexph`
+- [x] Fix autoload path to root autoload
 - [ ] Review frontend CLI commands
 - [ ] Design command namespace for frontend commands
-- [ ] Add `nexph run` plan
-- [ ] Add `nexph serve` plan
-- [ ] Add `nexph install` plan
+- [x] Add `nexph run` plan
+- [x] Add `nexph serve` plan
+- [x] Add `nexph install` plan
 - [ ] Add `nexph build` plan
 - [ ] Add `nexph dev` plan
-- [ ] Keep frontend CLI as reference until merge complete
+- [x] Keep frontend CLI as reference until merge complete
 
 ## Phase 7 - Config And Database Mapping
 
@@ -268,13 +268,13 @@ Tasks:
 
 Tasks:
 
-- [ ] Copy config files
-- [ ] Copy database migrations
+- [x] Copy config files
+- [x] Copy database migrations
 - [ ] Move deploy configs to docs later
 - [ ] Review `config/session.php` as package candidate
 - [ ] Review `config/api.json` vs `config/api.php`
-- [ ] Do not copy `.env`
-- [ ] Copy `.env.example`
+- [x] Do not copy `.env`
+- [x] Copy `.env.example`
 
 ## Phase 8 - Docs Mapping
 
@@ -289,13 +289,13 @@ Tasks:
 
 Tasks:
 
-- [ ] Copy backend runtime docs
-- [ ] Copy frontend docs
-- [ ] Do not copy backend `docs/node_modules`
-- [ ] Do not copy docs cache
-- [ ] Do not copy docs dist unless publish decision says yes
+- [x] Copy backend runtime docs
+- [x] Copy frontend docs
+- [x] Do not copy backend `docs/node_modules`
+- [x] Do not copy docs cache
+- [x] Do not copy docs dist unless publish decision says yes
 - [ ] Merge duplicate docs later
-- [ ] Keep root plans
+- [x] Keep root plans
 
 ## Phase 9 - Scripts Mapping
 
@@ -311,10 +311,10 @@ Tasks:
 
 Tasks:
 
-- [ ] Copy benchmark scripts
-- [ ] Copy smoke scripts
+- [x] Copy benchmark scripts
+- [x] Copy smoke scripts
 - [ ] Update paths if needed
-- [ ] Keep old scripts until root commands work
+- [x] Keep old scripts until root commands work
 
 ## Phase 10 - Examples Mapping
 
@@ -328,11 +328,11 @@ Tasks:
 
 Tasks:
 
-- [ ] Copy backend examples
-- [ ] Copy backend demo app
-- [ ] Copy backend demo routes
-- [ ] Copy backend metadata
-- [ ] Copy frontend examples
+- [x] Copy backend examples
+- [x] Copy backend demo app
+- [x] Copy backend demo routes
+- [x] Copy backend metadata
+- [x] Copy frontend examples
 - [ ] Add examples README later
 
 ## Phase 11 - Tests Mapping
@@ -346,53 +346,53 @@ Tasks:
 
 Tasks:
 
-- [ ] Copy backend runtime tests
-- [ ] Copy backend unit tests
-- [ ] Copy queue tests
-- [ ] Copy frontend tests
-- [ ] Do not copy generated benchmark results
+- [x] Copy backend runtime tests
+- [x] Copy backend unit tests
+- [x] Copy queue tests
+- [x] Copy frontend tests
+- [x] Do not copy generated benchmark results
 - [ ] Update test bootstrap paths later
 
 ## Phase 12 - Root Autoload Plan
 
-- [ ] Create root `autoload.php`
-- [ ] Map `Core\Runtime` to `src/Runtime`
-- [ ] Map `Core\Server` to `src/Server`
-- [ ] Map `Core\Http` to `src/Http`
-- [ ] Map `Core\Database` to `src/Database`
-- [ ] Map `Core\Queue` to `src/Queue`
-- [ ] Map `Core\Event` to `src/Event`
-- [ ] Map `Core\Health` to `src/Health`
-- [ ] Map `Core\Log` to `src/Log`
-- [ ] Map `Core\Support` to `src/Support`
-- [ ] Map `Nexph` UI namespace to `ui/`
-- [ ] Add package loader later
-- [ ] Keep Composer bridge optional
-- [ ] Test class autoload
+- [x] Create root `autoload.php`
+- [x] Map `Core\Runtime` to `src/Runtime`
+- [x] Map `Core\Server` to `src/Server`
+- [x] Map `Core\Http` to `src/Http`
+- [x] Map `Core\Database` to `src/Database`
+- [x] Map `Core\Queue` to `src/Queue`
+- [x] Map `Core\Event` to `src/Event`
+- [x] Map `Core\Health` to `src/Health`
+- [x] Map `Core\Log` to `src/Log`
+- [x] Map `Core\Support` to `src/Support`
+- [x] Map `Nexph` UI namespace to `ui/`
+- [x] Add package loader later
+- [x] Keep Composer bridge optional
+- [x] Test class autoload
 
 ## Phase 13 - Root Manifest Plan
 
-- [ ] Create root `nexph.json`
-- [ ] Add package name
-- [ ] Add version
-- [ ] Add runtime section
-- [ ] Add autoload section
-- [ ] Add package manager section
-- [ ] Add repositories section
-- [ ] Add scripts section
-- [ ] Do not create `nexph.lock` until resolver works
+- [x] Create root `nexph.json`
+- [x] Add package name
+- [x] Add version
+- [x] Add runtime section
+- [x] Add autoload section
+- [x] Add package manager section
+- [x] Add repositories section
+- [x] Add scripts section
+- [x] Do not create `nexph.lock` until resolver works
 
 ## Phase 14 - Verification
 
-- [ ] PHP lint root copied backend files
-- [ ] PHP lint root copied UI files
-- [ ] Test root autoload
-- [ ] Test root CLI basic command
+- [x] PHP lint root copied backend files
+- [x] PHP lint root copied UI files
+- [x] Test root autoload
+- [x] Test root CLI basic command
 - [ ] Test root `runtime/server/serve.php --help` later
 - [ ] Test root stateless FPM bootstrap syntax
-- [ ] Test root smoke script syntax
-- [ ] Compare old and new file counts
-- [ ] Confirm old engine folders untouched
+- [x] Test root smoke script syntax
+- [x] Compare old and new file counts
+- [x] Confirm old engine folders untouched
 
 ## Phase 15 - Switch Over Later
 

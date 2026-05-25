@@ -1,0 +1,25 @@
+{
+    "name": "nexph/auth",
+    "version": "0.1.0",
+    "type": "module",
+    "description": "Authentication, session management, and CSRF protection for Nexph",
+    "license": "MIT",
+    "requires": {
+        "nexph/backend-engine": ">=0.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Core\\Auth\\": "src/"
+        }
+    },
+    "providers": [
+        "Core\\Auth\\AuthServiceProvider"
+    ],
+    "routes": [
+        "routes/auth.php"
+    ],
+    "config": {
+        "session": "config/session.php"
+    },
+    "commands": []
+}

@@ -1,0 +1,8 @@
+{
+    "name": "test/cli-only",
+    "version": "1.0.0",
+    "type": "module",
+    "commands": {"test:greet": "Test\\CliOnly\\GreetCommand"},
+    "autoload": {"psr-4": {"Test\\CliOnly\\": "src/"}},
+    "requires": {}
+}

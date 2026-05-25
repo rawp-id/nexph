@@ -1,0 +1,7 @@
+{
+    "name": "test/config-package",
+    "version": "1.0.0",
+    "type": "module",
+    "config": {"test": "config/test.php"},
+    "requires": {}
+}

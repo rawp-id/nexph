@@ -1,0 +1,19 @@
+{
+    "name": "test/valid-package",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "Test fixture - valid package",
+    "autoload": {
+        "psr-4": {
+            "Test\\ValidPackage\\": "src/"
+        }
+    },
+    "preload": ["src/Helper.php"],
+    "lazy": {
+        "Test\\ValidPackage\\LazyService": "src/LazyService.php"
+    },
+    "providers": [],
+    "routes": [],
+    "commands": [],
+    "requires": {}
+}

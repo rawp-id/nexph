@@ -1,0 +1,8 @@
+{
+    "name": "test/command-package",
+    "version": "1.0.0",
+    "type": "module",
+    "commands": {"test:hello": "Test\\CommandPackage\\HelloCommand"},
+    "autoload": {"psr-4": {"Test\\CommandPackage\\": "src/"}},
+    "requires": {}
+}

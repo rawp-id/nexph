@@ -1,0 +1,7 @@
+{
+    "name": "test/route-package",
+    "version": "1.0.0",
+    "type": "module",
+    "routes": ["routes.php"],
+    "requires": {}
+}

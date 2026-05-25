@@ -1,0 +1,8 @@
+{
+    "name": "test/middleware-package",
+    "version": "1.0.0",
+    "type": "module",
+    "hooks": [{"middleware": "Test\\Middleware\\TimingMiddleware"}],
+    "autoload": {"psr-4": {"Test\\Middleware\\": "src/"}},
+    "requires": {}
+}

@@ -1,0 +1,6 @@
+{
+    "name": "test/traversal",
+    "version": "1.0.0",
+    "type": "module",
+    "preload": ["../../etc/passwd"]
+}

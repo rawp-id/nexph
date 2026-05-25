@@ -1,0 +1,8 @@
+{
+    "name": "test/express-package",
+    "version": "1.0.0",
+    "type": "module",
+    "routes": ["routes.php"],
+    "autoload": {"psr-4": {"Test\\Express\\": "src/"}},
+    "requires": {}
+}

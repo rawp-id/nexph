@@ -1,0 +1,85 @@
+{
+    "table": "users",
+    "fillable": ["username", "password", "role"],
+    "hidden": ["password"],
+    "casts": {},
+    "indexes": [],
+    "fields": [
+        {
+            "name": "id",
+            "type": "UUID",
+            "length": "",
+            "default": "",
+            "nullable": false,
+            "unique": false,
+            "primary": true,
+            "autoincrement": false,
+            "references": {
+                "table": "",
+                "column": ""
+            }
+        },
+        {
+            "name": "username",
+            "type": "TEXT",
+            "length": "",
+            "default": "",
+            "nullable": false,
+            "unique": true,
+            "primary": false,
+            "autoincrement": false,
+            "references": {
+                "table": "",
+                "column": ""
+            }
+        },
+        {
+            "name": "password",
+            "type": "TEXT",
+            "length": "",
+            "default": "",
+            "nullable": false,
+            "unique": false,
+            "primary": false,
+            "autoincrement": false,
+            "references": {
+                "table": "",
+                "column": ""
+            }
+        },
+        {
+            "name": "role",
+            "type": "TEXT",
+            "length": "",
+            "default": "user",
+            "nullable": true,
+            "unique": false,
+            "primary": false,
+            "autoincrement": false,
+            "references": {
+                "table": "",
+                "column": ""
+            }
+        },
+        {
+            "name": "created_at",
+            "type": "DATETIME",
+            "default": "CURRENT_TIMESTAMP",
+            "nullable": true,
+            "references": {
+                "table": "",
+                "column": ""
+            }
+        },
+        {
+            "name": "updated_at",
+            "type": "DATETIME",
+            "default": "CURRENT_TIMESTAMP",
+            "nullable": true,
+            "references": {
+                "table": "",
+                "column": ""
+            }
+        }
+    ]
+}
