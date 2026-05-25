@@ -104,84 +104,84 @@ backend-engine/
 
 Tasks:
 
-- [ ] Confirm `core/Runtime` stays
-- [ ] Confirm `core/Server` stays
-- [ ] Confirm `core/Http` stays for stateless runtime
-- [ ] Confirm `core/Queue` stays if runtime-native queue
-- [ ] Confirm `core/Database` stays if core package
-- [ ] Confirm `core/Auth` becomes package candidate
-- [ ] Confirm `core/UI` becomes package or moves out
-- [ ] Confirm `app/` is demo/app-level
-- [ ] Confirm `routes/` is demo/app-level except examples
-- [ ] Confirm `public/` is stateless example or runtime public bridge
-- [ ] Confirm `metadata/` is example data
-- [ ] Confirm `storage/` runtime files are ignored
-- [ ] Confirm `serve.php` becomes internal bootstrap or CLI target
-- [ ] Confirm `serve` wrapper status
-- [ ] Confirm `stop` wrapper status
-- [ ] Confirm config files to keep
-- [ ] Confirm config files to move docs/examples
+- [x] Confirm `core/Runtime` stays
+- [x] Confirm `core/Server` stays
+- [x] Confirm `core/Http` stays for stateless runtime
+- [x] Confirm `core/Queue` stays if runtime-native queue
+- [x] Confirm `core/Database` stays if core package
+- [x] Confirm `core/Auth` becomes package candidate
+- [x] Confirm `core/UI` becomes package or moves out
+- [x] Confirm `app/` is demo/app-level
+- [x] Confirm `routes/` is demo/app-level except examples
+- [x] Confirm `public/` is stateless example or runtime public bridge
+- [x] Confirm `metadata/` is example data
+- [x] Confirm `storage/` runtime files are ignored
+- [x] Confirm `serve.php` becomes internal bootstrap or CLI target
+- [x] Confirm `serve` wrapper status
+- [x] Confirm `stop` wrapper status
+- [x] Confirm config files to keep
+- [x] Confirm config files to move docs/examples
 
 ## Phase 3 - Backend Keep/Move/Delete Map
 
 ### Keep As Runtime Core
 
-- [ ] `autoload.php`
-- [ ] `bin/nexph`
-- [ ] `core/Runtime/`
-- [ ] `core/Server/`
-- [ ] `core/Http/`
-- [ ] `core/Support/`
-- [ ] `core/Queue/`
-- [ ] `core/Database/`
-- [ ] `core/Log/`
-- [ ] `serve.php`
-- [ ] `scripts/k6-users.js`
-- [ ] `scripts/k6-ws.js`
-- [ ] `scripts/k6-sse.js`
-- [ ] `scripts/server-test.php`
-- [ ] `scripts/ws-test.php`
+- [x] `autoload.php`
+- [x] `bin/nexph`
+- [x] `core/Runtime/`
+- [x] `core/Server/`
+- [x] `core/Http/`
+- [x] `core/Support/`
+- [x] `core/Queue/`
+- [x] `core/Database/`
+- [x] `core/Log/`
+- [x] `serve.php`
+- [x] `scripts/k6-users.js`
+- [x] `scripts/k6-ws.js`
+- [x] `scripts/k6-sse.js`
+- [x] `scripts/server-test.php`
+- [x] `scripts/ws-test.php`
 
 ### Candidate Package
 
-- [ ] `core/Auth/`
-- [ ] `core/Cache/`
-- [ ] `core/UI/`
-- [ ] `core/Generator/`
-- [ ] `routes/auth.php`
-- [ ] `routes/admin.php`
-- [ ] `public/api-explorer.html`
-- [ ] `public/observability.php`
+- [x] `core/Auth/`
+- [x] `core/Cache/`
+- [x] `core/UI/`
+- [x] `core/Generator/`
+- [x] `routes/auth.php`
+- [x] `routes/admin.php`
+- [x] `public/api-explorer.html`
+- [x] `public/observability.php`
 
 ### Move To Examples
 
-- [ ] `app/`
-- [ ] `routes/api.php`
-- [ ] `routes/debug.php`
-- [ ] `routes/health.php`
-- [ ] `metadata/`
-- [ ] `examples/`
-- [ ] `dashboard.html`
-- [ ] `keygen.php`
+- [x] `app/`
+- [x] `routes/api.php`
+- [x] `routes/debug.php`
+- [x] `routes/health.php`
+- [x] `metadata/`
+- [x] `examples/`
+- [x] `dashboard.html`
+- [x] `keygen.php`
 
 ### Move To Deploy Docs
 
-- [ ] `nexph-nginx.conf`
-- [ ] `nexph-fpm-pool.conf`
-- [ ] `nexph-opcache.ini`
-- [ ] `nexph-worker.service`
-- [ ] `scripts/nexph-worker.service`
-- [ ] `scripts/nexph-worker.supervisor.conf`
+- [x] `nexph-nginx.conf`
+- [x] `nexph-fpm-pool.conf`
+- [x] `nexph-opcache.ini`
+- [x] `nexph-worker.service`
+- [x] `scripts/nexph-worker.service`
+- [x] `scripts/nexph-worker.supervisor.conf`
 
 ### Remove Later After Backup
 
-- [ ] `public/index.backup.php`
-- [ ] `public/index.php.backup`
-- [ ] `public/index.optimized.php`
-- [ ] `storage/*.sqlite-shm`
-- [ ] `storage/*.sqlite-wal`
-- [ ] `tests/benchmark_results/`
-- [ ] `benchmark_results/`
+- [x] `public/index.backup.php`
+- [x] `public/index.php.backup`
+- [x] `public/index.optimized.php`
+- [x] `storage/*.sqlite-shm`
+- [x] `storage/*.sqlite-wal`
+- [x] `tests/benchmark_results/`
+- [x] `benchmark_results/`
 - [ ] duplicate old docs
 
 ## Phase 4 - Frontend Target Structure
