@@ -210,62 +210,62 @@ frontend-engine/
 
 Tasks:
 
-- [ ] Confirm `src/Runtime` stays
-- [ ] Confirm `src/Compiler` stays
-- [ ] Confirm `src/Builder` stays
-- [ ] Confirm `src/DevServer` stays
-- [ ] Confirm `src/Plugin` stays
-- [ ] Confirm `src/Autoload` stays
-- [ ] Confirm `examples/` stays but minimal
-- [ ] Confirm `dist/` publish policy
-- [ ] Confirm `docs/` vs `docs-site/`
-- [ ] Confirm generated docs policy
-- [ ] Confirm frontend package manifest
+- [x] Confirm `src/Runtime` stays
+- [x] Confirm `src/Compiler` stays
+- [x] Confirm `src/Builder` stays
+- [x] Confirm `src/DevServer` stays
+- [x] Confirm `src/Plugin` stays
+- [x] Confirm `src/Autoload` stays
+- [x] Confirm `examples/` stays but minimal
+- [x] Confirm `dist/` publish policy
+- [x] Confirm `docs/` vs `docs-site/`
+- [x] Confirm generated docs policy
+- [x] Confirm frontend package manifest
 
 ## Phase 5 - Frontend Keep/Move/Delete Map
 
 ### Keep As Runtime Core
 
-- [ ] `autoload.php`
-- [ ] `bin/nexph`
-- [ ] `src/`
-- [ ] `tests/`
-- [ ] `examples/`
-- [ ] `README.md`
-- [ ] `LICENSE`
-- [ ] `nexph.d.ts`
-- [ ] `phpunit.xml`
+- [x] `autoload.php`
+- [x] `bin/nexph`
+- [x] `src/`
+- [x] `tests/`
+- [x] `examples/`
+- [x] `README.md`
+- [x] `LICENSE`
+- [x] `nexph.d.ts`
+- [x] `phpunit.xml`
 
 ### Review Publish Policy
 
-- [ ] `dist/`
-- [ ] `docs-site/`
-- [ ] `.phpunit.result.cache`
+- [x] `dist/`
+- [x] `docs-site/`
+- [x] `.phpunit.result.cache`
 
 ### Move Or Merge
 
-- [ ] `docs/`
-- [ ] `docs-site/`
-- [ ] generated docs assets
+- [x] `docs/`
+- [x] `docs-site/`
+- [x] generated docs assets
 
 ## Phase 6 - CLI Distribution Design
 
-- [ ] Decide single CLI name `nexph`
-- [ ] Decide backend CLI ownership
-- [ ] Decide frontend CLI integration
-- [ ] Decide `nexph run`
-- [ ] Decide `nexph serve`
-- [ ] Decide `nexph dev`
-- [ ] Decide `nexph build`
-- [ ] Decide `nexph install`
-- [ ] Decide `nexph update`
-- [ ] Decide `nexph remove`
-- [ ] Decide `nexph module:list`
-- [ ] Decide `nexph runtime:stats`
-- [ ] Decide `nexph benchmark`
-- [ ] Decide CLI config lookup
-- [ ] Decide project root lookup
-- [ ] Decide bin install path
+- [x] Decide single CLI name `nexph`
+- [x] Decide backend CLI ownership
+- [x] Decide frontend CLI integration
+- [x] Decide `nexph run`
+- [x] Decide `nexph serve`
+- [x] Decide `nexph dev`
+- [x] Decide `nexph build`
+- [x] Decide `nexph install`
+- [x] Decide `nexph update`
+- [x] Decide `nexph remove`
+- [x] Decide `nexph module:list`
+- [x] Decide `nexph runtime:stats`
+- [x] Decide `nexph benchmark`
+- [x] Decide CLI config lookup
+- [x] Decide project root lookup
+- [x] Decide bin install path
 - [ ] Decide shell completion later
 
 ## Phase 7 - `nexph run` Design
