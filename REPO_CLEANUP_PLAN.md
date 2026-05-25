@@ -270,20 +270,20 @@ Tasks:
 
 ## Phase 7 - `nexph run` Design
 
-- [ ] Define `nexph run file.php`
-- [ ] Define argv forwarding
-- [ ] Define working directory behavior
-- [ ] Define bootstrap behavior
-- [ ] Define autoload behavior
-- [ ] Define package loader behavior
+- [x] Define `nexph run file.php`
+- [x] Define argv forwarding
+- [x] Define working directory behavior
+- [x] Define bootstrap behavior
+- [x] Define autoload behavior
+- [x] Define package loader behavior
 - [ ] Define Composer bridge behavior
-- [ ] Define env file loading
-- [ ] Define error formatting
-- [ ] Define exit code behavior
+- [x] Define env file loading
+- [x] Define error formatting
+- [x] Define exit code behavior
 - [ ] Define stdin behavior
 - [ ] Define signal behavior
-- [ ] Test run simple PHP file
-- [ ] Test run file with Nexph autoload
+- [x] Test run simple PHP file
+- [x] Test run file with Nexph autoload
 - [ ] Test run file with package import
 - [ ] Test run file with Composer library
 
@@ -308,14 +308,14 @@ backend-engine/core/Runtime/Package/
 
 Tasks:
 
-- [ ] Create package namespace plan
-- [ ] Create installer boundary
-- [ ] Create resolver boundary
-- [ ] Create downloader boundary
-- [ ] Create lockfile boundary
-- [ ] Create registry boundary
-- [ ] Create Composer bridge boundary
-- [ ] Create tests boundary
+- [x] Create package namespace plan
+- [x] Create installer boundary
+- [x] Create resolver boundary
+- [x] Create downloader boundary
+- [x] Create lockfile boundary
+- [x] Create registry boundary
+- [x] Create Composer bridge boundary
+- [x] Create tests boundary
 
 ## Phase 9 - Runtime Loader Folder Plan
 
@@ -336,30 +336,30 @@ backend-engine/core/Runtime/Loader/
 
 Tasks:
 
-- [ ] Create loader namespace plan
-- [ ] Create manifest parser plan
-- [ ] Create registry plan
-- [ ] Create preloader plan
-- [ ] Create lazy resolver plan
-- [ ] Create contract plan
-- [ ] Create exceptions plan
-- [ ] Create tests plan
+- [x] Create loader namespace plan
+- [x] Create manifest parser plan
+- [x] Create registry plan
+- [x] Create preloader plan
+- [x] Create lazy resolver plan
+- [x] Create contract plan
+- [x] Create exceptions plan
+- [x] Create tests plan
 
 ## Phase 10 - Manifest Files
 
 - [ ] Add root workspace `nexph.json` later
-- [ ] Add backend `nexph.json`
-- [ ] Add frontend `nexph.json`
-- [ ] Add example package `nexph.json`
-- [ ] Add package fixture `nexph.json`
+- [x] Add backend `nexph.json`
+- [x] Add frontend `nexph.json`
+- [x] Add example package `nexph.json`
+- [x] Add package fixture `nexph.json`
 - [ ] Add lockfile spec docs
 - [ ] Do not generate real `nexph.lock` until resolver exists
 
 ## Phase 11 - Documentation Cleanup
 
-- [ ] Backend README becomes runtime README
-- [ ] Frontend README becomes runtime/compiler README
-- [ ] Root README describes workspace
+- [x] Backend README becomes runtime README
+- [x] Frontend README becomes runtime/compiler README
+- [x] Root README describes workspace
 - [ ] Runtime docs split from old stateful doc
 - [ ] Loader docs linked
 - [ ] Package manager docs linked
@@ -370,43 +370,43 @@ Tasks:
 
 ## Phase 12 - Test And Benchmark Cleanup
 
-- [ ] Move k6 scripts to `scripts/benchmarks/`
-- [ ] Move smoke scripts to `scripts/smoke/`
-- [ ] Keep HTTP k6 script
-- [ ] Keep WS k6 script
-- [ ] Keep SSE k6 script
-- [ ] Keep PHP server test
-- [ ] Document test commands
-- [ ] Remove old duplicate benchmark scripts later
-- [ ] Keep test fixtures minimal
+- [x] Move k6 scripts to `scripts/benchmarks/`
+- [x] Move smoke scripts to `scripts/smoke/`
+- [x] Keep HTTP k6 script
+- [x] Keep WS k6 script
+- [x] Keep SSE k6 script
+- [x] Keep PHP server test
+- [x] Document test commands
+- [x] Remove old duplicate benchmark scripts later
+- [x] Keep test fixtures minimal
 
 ## Phase 13 - Publish Hygiene
 
-- [ ] Ensure no `.env` committed in publish repo
-- [ ] Ensure no sqlite WAL committed
-- [ ] Ensure no generated cache committed
-- [ ] Ensure docs build artifacts policy clear
-- [ ] Ensure executable bits correct
-- [ ] Ensure LICENSE present
-- [ ] Ensure README clear
+- [x] Ensure no `.env` committed in publish repo
+- [x] Ensure no sqlite WAL committed
+- [x] Ensure no generated cache committed
+- [x] Ensure docs build artifacts policy clear
+- [x] Ensure executable bits correct
+- [x] Ensure LICENSE present
+- [x] Ensure README clear
 - [ ] Ensure version clear
-- [ ] Ensure package manifest clear
-- [ ] Ensure install instructions clear
+- [x] Ensure package manifest clear
+- [x] Ensure install instructions clear
 
 ## Phase 14 - Execution Order
 
-- [ ] Audit backend tree
-- [ ] Audit frontend tree
-- [ ] Write keep/move/delete report
-- [ ] Update `.gitignore`
-- [ ] Create target folders without moving code
-- [ ] Add manifests
-- [ ] Add CLI plan docs
-- [ ] Add loader/package folders skeleton
+- [x] Audit backend tree
+- [x] Audit frontend tree
+- [x] Write keep/move/delete report
+- [x] Update `.gitignore`
+- [x] Create target folders without moving code
+- [x] Add manifests
+- [x] Add CLI plan docs
+- [x] Add loader/package folders skeleton
 - [ ] Add tests skeleton
-- [ ] Move docs first
-- [ ] Move scripts second
-- [ ] Move examples third
+- [x] Move docs first
+- [x] Move scripts second
+- [x] Move examples third
 - [ ] Refactor code only after docs/scripts stable
 - [ ] Implement package manager
 - [ ] Implement runtime loader

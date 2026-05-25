@@ -155,48 +155,48 @@ nexph module:list
 
 ## Phase 4 - Loader Contracts
 
-- [ ] Buat kontrak `ModuleInterface`
-- [ ] Buat kontrak `ServiceProviderInterface`
-- [ ] Buat kontrak `RouteProviderInterface`
-- [ ] Buat kontrak `CommandProviderInterface`
-- [ ] Buat kontrak `HookProviderInterface`
-- [ ] Buat kontrak `ConfigProviderInterface`
-- [ ] Buat kontrak `PreloadableInterface`
-- [ ] Buat kontrak `BootableInterface`
-- [ ] Buat kontrak `ShutdownableInterface`
-- [ ] Buat kontrak lifecycle order
-- [ ] Buat kontrak error handling
-- [ ] Buat kontrak idempotency
+- [x] Buat kontrak `ModuleInterface`
+- [x] Buat kontrak `ServiceProviderInterface`
+- [x] Buat kontrak `RouteProviderInterface`
+- [x] Buat kontrak `CommandProviderInterface`
+- [x] Buat kontrak `HookProviderInterface`
+- [x] Buat kontrak `ConfigProviderInterface`
+- [x] Buat kontrak `PreloadableInterface`
+- [x] Buat kontrak `BootableInterface`
+- [x] Buat kontrak `ShutdownableInterface`
+- [x] Buat kontrak lifecycle order
+- [x] Buat kontrak error handling
+- [x] Buat kontrak idempotency
 
 ## Phase 5 - Core Loader Classes
 
-- [ ] Buat `ModuleManifest`
-- [ ] Buat `ManifestParser`
-- [ ] Buat `ManifestValidator`
-- [ ] Buat `ModuleRegistry`
-- [ ] Buat `RuntimeLoader`
-- [ ] Buat `RuntimePreloader`
-- [ ] Buat `LazyModuleResolver`
+- [x] Buat `ModuleManifest`
+- [x] Buat `ManifestParser`
+- [x] Buat `ManifestValidator`
+- [x] Buat `ModuleRegistry`
+- [x] Buat `RuntimeLoader`
+- [x] Buat `RuntimePreloader`
+- [x] Buat `LazyModuleResolver`
 - [ ] Buat `ModuleDependencyResolver`
-- [ ] Buat `ModuleLoadException`
-- [ ] Buat `ManifestValidationException`
-- [ ] Buat `ModuleNotFoundException`
-- [ ] Buat `ModuleConflictException`
+- [x] Buat `ModuleLoadException`
+- [x] Buat `ManifestValidationException`
+- [x] Buat `ModuleNotFoundException`
+- [x] Buat `ModuleConflictException`
 
 ## Phase 5.5 - Package Manager Classes
 
-- [ ] Buat folder `core/Runtime/Package`
-- [ ] Buat `PackageManager`
-- [ ] Buat `PackageManifest`
-- [ ] Buat `PackageLock`
-- [ ] Buat `PackageResolver`
-- [ ] Buat `PackageInstaller`
+- [x] Buat folder `core/Runtime/Package`
+- [x] Buat `PackageManager`
+- [x] Buat `PackageManifest`
+- [x] Buat `PackageLock`
+- [x] Buat `PackageResolver`
+- [x] Buat `PackageInstaller`
 - [ ] Buat `PackageDownloader`
 - [ ] Buat `PackageRepository`
 - [ ] Buat `PackageRegistryClient`
 - [ ] Buat `PackageExtractor`
 - [ ] Buat `PackageVerifier`
-- [ ] Buat `PackageRemover`
+- [x] Buat `PackageRemover`
 - [ ] Buat `PackageUpdater`
 - [ ] Buat `PackagePublisher`
 - [ ] Buat `PackageInstallException`
