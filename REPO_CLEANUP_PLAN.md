@@ -34,16 +34,16 @@ nexph build
 
 ## Phase 0 - Freeze
 
-- [ ] Stop fitur runtime baru sementara
-- [ ] Stop transport baru sementara
-- [ ] Stop UI feature baru sementara
-- [ ] Fokus cleanup folder
-- [ ] Fokus docs publish
-- [ ] Fokus CLI shape
-- [ ] Fokus loader/package manager plan
-- [ ] Jangan hapus file sebelum mapping jelas
-- [ ] Jangan pindah file tanpa test
-- [ ] Jangan rename namespace besar dulu
+- [x] Stop fitur runtime baru sementara
+- [x] Stop transport baru sementara
+- [x] Stop UI feature baru sementara
+- [x] Fokus cleanup folder
+- [x] Fokus docs publish
+- [x] Fokus CLI shape
+- [x] Fokus loader/package manager plan
+- [x] Jangan hapus file sebelum mapping jelas
+- [x] Jangan pindah file tanpa test
+- [x] Jangan rename namespace besar dulu
 
 ## Phase 1 - Workspace Audit
 
