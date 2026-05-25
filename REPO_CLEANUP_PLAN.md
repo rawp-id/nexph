@@ -47,23 +47,23 @@ nexph build
 
 ## Phase 1 - Workspace Audit
 
-- [ ] Audit root `/home/rawp/Tech/nexph`
-- [ ] Audit root files
-- [ ] Audit root plans
-- [ ] Audit root docs
-- [ ] Audit `backend-engine/`
-- [ ] Audit `frontend-engine/`
-- [ ] Audit nested `.git`
-- [ ] Audit generated files
-- [ ] Audit benchmark artifacts
-- [ ] Audit SQLite runtime files
-- [ ] Audit backup files
-- [ ] Audit docs build artifacts
-- [ ] Audit duplicate docs
-- [ ] Audit duplicate CLIs
-- [ ] Audit executable scripts
-- [ ] Audit service files
-- [ ] Audit nginx/fpm config
+- [x] Audit root `/home/rawp/Tech/nexph`
+- [x] Audit root files
+- [x] Audit root plans
+- [x] Audit root docs
+- [x] Audit `backend-engine/`
+- [x] Audit `frontend-engine/`
+- [x] Audit nested `.git`
+- [x] Audit generated files
+- [x] Audit benchmark artifacts
+- [x] Audit SQLite runtime files
+- [x] Audit backup files
+- [x] Audit docs build artifacts
+- [x] Audit duplicate docs
+- [x] Audit duplicate CLIs
+- [x] Audit executable scripts
+- [x] Audit service files
+- [x] Audit nginx/fpm config
 
 ## Phase 2 - Backend Target Structure
 
