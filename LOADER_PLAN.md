@@ -191,18 +191,18 @@ nexph module:list
 - [x] Buat `PackageLock`
 - [x] Buat `PackageResolver`
 - [x] Buat `PackageInstaller`
-- [ ] Buat `PackageDownloader`
-- [ ] Buat `PackageRepository`
-- [ ] Buat `PackageRegistryClient`
-- [ ] Buat `PackageExtractor`
-- [ ] Buat `PackageVerifier`
+- [x] Buat `PackageDownloader`
+- [x] Buat `PackageRepository`
+- [x] Buat `PackageRegistryClient`
+- [x] Buat `PackageExtractor`
+- [x] Buat `PackageVerifier`
 - [x] Buat `PackageRemover`
-- [ ] Buat `PackageUpdater`
-- [ ] Buat `PackagePublisher`
-- [ ] Buat `PackageInstallException`
-- [ ] Buat `PackageResolveException`
-- [ ] Buat `PackageDownloadException`
-- [ ] Buat `PackageVerifyException`
+- [x] Buat `PackageUpdater`
+- [x] Buat `PackagePublisher`
+- [x] Buat `PackageInstallException`
+- [x] Buat `PackageResolveException`
+- [x] Buat `PackageDownloadException`
+- [x] Buat `PackageVerifyException`
 
 ## Phase 6 - Runtime Preload
 
@@ -285,43 +285,43 @@ nexph module:list
 
 ## Phase 9.5 - Package Registry Protocol
 
-- [ ] Definisikan registry base URL
-- [ ] Definisikan package lookup endpoint
-- [ ] Definisikan version metadata endpoint
-- [ ] Definisikan dist download URL field
-- [ ] Definisikan checksum field
-- [ ] Definisikan signature field future
-- [ ] Definisikan package search endpoint
-- [ ] Definisikan publish endpoint future
-- [ ] Definisikan auth token future
-- [ ] Definisikan offline cache behavior
-- [ ] Definisikan local registry override
-- [ ] Definisikan Git source fallback
-- [ ] Definisikan path source fallback
-- [ ] Test registry response parse
-- [ ] Test missing registry package
-- [ ] Test cache fallback
+- [x] Definisikan registry base URL
+- [x] Definisikan package lookup endpoint
+- [x] Definisikan version metadata endpoint
+- [x] Definisikan dist download URL field
+- [x] Definisikan checksum field
+- [x] Definisikan signature field future
+- [x] Definisikan package search endpoint
+- [x] Definisikan publish endpoint future
+- [x] Definisikan auth token future
+- [x] Definisikan offline cache behavior
+- [x] Definisikan local registry override
+- [x] Definisikan Git source fallback
+- [x] Definisikan path source fallback
+- [x] Test registry response parse
+- [x] Test missing registry package
+- [x] Test cache fallback
 
 ## Phase 9.6 - Dependency Resolver
 
-- [ ] Parse semver constraints
-- [ ] Resolve exact version
-- [ ] Resolve caret constraint
-- [ ] Resolve tilde constraint
-- [ ] Resolve wildcard constraint
-- [ ] Resolve latest stable
-- [ ] Resolve pre-release opt-in
-- [ ] Resolve transitive dependency
-- [ ] Detect circular dependency
-- [ ] Detect version conflict
-- [ ] Detect platform PHP mismatch
-- [ ] Detect missing PHP extension
-- [ ] Prefer locked version on install
-- [ ] Update locked version on update
-- [ ] Test exact resolve
-- [ ] Test transitive resolve
-- [ ] Test conflict resolve
-- [ ] Test circular dependency
+- [x] Parse semver constraints
+- [x] Resolve exact version
+- [x] Resolve caret constraint
+- [x] Resolve tilde constraint
+- [x] Resolve wildcard constraint
+- [x] Resolve latest stable
+- [x] Resolve pre-release opt-in
+- [x] Resolve transitive dependency
+- [x] Detect circular dependency
+- [x] Detect version conflict
+- [x] Detect platform PHP mismatch
+- [x] Detect missing PHP extension
+- [x] Prefer locked version on install
+- [x] Update locked version on update
+- [x] Test exact resolve
+- [x] Test transitive resolve
+- [x] Test conflict resolve
+- [x] Test circular dependency
 
 ## Phase 10 - Composer Bridge Design
 
@@ -372,107 +372,107 @@ nexph module:list
 
 ## Phase 12 - Hybrid Package Loading
 
-- [ ] Load native package first
-- [ ] Load Composer bridge second
-- [ ] Allow native package to wrap Composer package
-- [ ] Allow Composer fallback for classes
-- [ ] Prevent duplicate provider registration
-- [ ] Prevent duplicate route registration
-- [ ] Prevent duplicate command registration
-- [ ] Record source `native`
-- [ ] Record source `composer`
-- [ ] Record source `hybrid`
-- [ ] Test native only
-- [ ] Test composer only
-- [ ] Test hybrid package
-- [ ] Test duplicate provider prevention
+- [x] Load native package first
+- [x] Load Composer bridge second
+- [x] Allow native package to wrap Composer package
+- [x] Allow Composer fallback for classes
+- [x] Prevent duplicate provider registration
+- [x] Prevent duplicate route registration
+- [x] Prevent duplicate command registration
+- [x] Record source `native`
+- [x] Record source `composer`
+- [x] Record source `hybrid`
+- [x] Test native only
+- [x] Test composer only
+- [x] Test hybrid package
+- [x] Test duplicate provider prevention
 
 ## Phase 12.5 - Install/Remove/Update Flow
 
-- [ ] Implement `nexph install <package>`
-- [ ] Implement `nexph install composer:<vendor/package>`
-- [ ] Implement `nexph remove <package>`
-- [ ] Implement `nexph update`
-- [ ] Implement `nexph update <package>`
-- [ ] Implement `nexph restore` from lockfile
+- [x] Implement `nexph install <package>`
+- [x] Implement `nexph install composer:<vendor/package>`
+- [x] Implement `nexph remove <package>`
+- [x] Implement `nexph update`
+- [x] Implement `nexph update <package>`
+- [x] Implement `nexph restore` from lockfile
 - [ ] Implement dry-run mode
 - [ ] Implement no-scripts mode
 - [ ] Implement offline mode
-- [ ] Install native package into `nexph_modules/`
+- [x] Install native package into `nexph_modules/`
 - [ ] Install path package by symlink or copy
-- [ ] Install Composer package into `vendor/`
-- [ ] Update `nexph.json`
-- [ ] Update `nexph.lock`
-- [ ] Rebuild module registry after install
-- [ ] Rebuild autoload map after install
-- [ ] Test install native package
-- [ ] Test install Composer package
-- [ ] Test remove native package
-- [ ] Test update package
-- [ ] Test restore lockfile
+- [x] Install Composer package into `vendor/`
+- [x] Update `nexph.json`
+- [x] Update `nexph.lock`
+- [x] Rebuild module registry after install
+- [x] Rebuild autoload map after install
+- [x] Test install native package
+- [x] Test install Composer package
+- [x] Test remove native package
+- [x] Test update package
+- [x] Test restore lockfile
 
 ## Phase 13 - Runtime Integration Points
 
-- [ ] Integrate loader into stateless bootstrap
-- [ ] Integrate loader into stateful `serve.php`
-- [ ] Integrate provider boot before routes
-- [ ] Integrate route providers with router
-- [ ] Integrate command providers with CLI
-- [ ] Integrate config providers before runtime start
-- [ ] Integrate hooks into runtime lifecycle
-- [ ] Ensure loader off by default if no modules
-- [ ] Ensure loader errors do not hide fatal cause
-- [ ] Ensure stateful workers do not double-boot unsafe modules
-- [ ] Test stateless bootstrap with no modules
-- [ ] Test stateful server with no modules
+- [x] Integrate loader into stateless bootstrap
+- [x] Integrate loader into stateful `serve.php`
+- [x] Integrate provider boot before routes
+- [x] Integrate route providers with router
+- [x] Integrate command providers with CLI
+- [x] Integrate config providers before runtime start
+- [x] Integrate hooks into runtime lifecycle
+- [x] Ensure loader off by default if no modules
+- [x] Ensure loader errors do not hide fatal cause
+- [x] Ensure stateful workers do not double-boot unsafe modules
+- [x] Test stateless bootstrap with no modules
+- [x] Test stateful server with no modules
 - [ ] Test module route in stateless mode
 - [ ] Test module route in stateful mode
 
 ## Phase 13.5 - Framework Pattern Support
 
-- [ ] Support Express-like route module
-- [ ] Support MVC module
-- [ ] Support functional routing module
-- [ ] Support middleware package
-- [ ] Support event-driven package
-- [ ] Support CLI-only package
-- [ ] Support config-only package
-- [ ] Support runtime-hook package
-- [ ] Ensure packages can be pattern-agnostic
-- [ ] Document pattern examples
-- [ ] Test Express-like package fixture
-- [ ] Test middleware package fixture
-- [ ] Test CLI-only package fixture
+- [x] Support Express-like route module
+- [x] Support MVC module
+- [x] Support functional routing module
+- [x] Support middleware package
+- [x] Support event-driven package
+- [x] Support CLI-only package
+- [x] Support config-only package
+- [x] Support runtime-hook package
+- [x] Ensure packages can be pattern-agnostic
+- [x] Document pattern examples
+- [x] Test Express-like package fixture
+- [x] Test middleware package fixture
+- [x] Test CLI-only package fixture
 
 ## Phase 14 - Security & Sandbox Research
 
-- [ ] Define package trust levels
-- [ ] Define sandbox metadata fields
-- [ ] Define disallowed file traversal
-- [ ] Block preload outside package root
-- [ ] Block lazy file outside package root
-- [ ] Validate provider class namespace
-- [ ] Validate route file path
-- [ ] Validate command file path
-- [ ] Document PHP sandbox limits
-- [ ] Document trusted package model
-- [ ] Document future sandbox research
-- [ ] Test path traversal block
-- [ ] Test invalid provider block
+- [x] Define package trust levels
+- [x] Define sandbox metadata fields
+- [x] Define disallowed file traversal
+- [x] Block preload outside package root
+- [x] Block lazy file outside package root
+- [x] Validate provider class namespace
+- [x] Validate route file path
+- [x] Validate command file path
+- [x] Document PHP sandbox limits
+- [x] Document trusted package model
+- [x] Document future sandbox research
+- [x] Test path traversal block
+- [x] Test invalid provider block
 
 ## Phase 15 - Observability
 
-- [ ] Add loader stats
-- [ ] Add module count metric
-- [ ] Add module load errors metric
-- [ ] Add preload count metric
-- [ ] Add preload duration metric
-- [ ] Add lazy hits metric
-- [ ] Add lazy misses metric
-- [ ] Add Composer bridge status metric
-- [ ] Add registry health info
-- [ ] Add loader diagnostics route or CLI output
-- [ ] Document loader metrics
+- [x] Add loader stats
+- [x] Add module count metric
+- [x] Add module load errors metric
+- [x] Add preload count metric
+- [x] Add preload duration metric
+- [x] Add lazy hits metric
+- [x] Add lazy misses metric
+- [x] Add Composer bridge status metric
+- [x] Add registry health info
+- [x] Add loader diagnostics route or CLI output
+- [x] Document loader metrics
 
 ## Phase 16 - CLI Commands
 
@@ -502,62 +502,62 @@ nexph module:list
 
 ## Phase 17 - Test Fixtures
 
-- [ ] Create valid minimal package fixture
-- [ ] Create valid full package fixture
-- [ ] Create route package fixture
-- [ ] Create command package fixture
-- [ ] Create config package fixture
-- [ ] Create invalid JSON fixture
-- [ ] Create missing name fixture
-- [ ] Create missing version fixture
-- [ ] Create dependency missing fixture
-- [ ] Create conflict fixture
-- [ ] Create path traversal fixture
+- [x] Create valid minimal package fixture
+- [x] Create valid full package fixture
+- [x] Create route package fixture
+- [x] Create command package fixture
+- [x] Create config package fixture
+- [x] Create invalid JSON fixture
+- [x] Create missing name fixture
+- [x] Create missing version fixture
+- [x] Create dependency missing fixture
+- [x] Create conflict fixture
+- [x] Create path traversal fixture
 - [ ] Create Composer fixture
 - [ ] Create hybrid fixture
-- [ ] Create Express-like package fixture
-- [ ] Create middleware package fixture
-- [ ] Create CLI-only package fixture
+- [x] Create Express-like package fixture
+- [x] Create middleware package fixture
+- [x] Create CLI-only package fixture
 - [ ] Create package registry fixture
 - [ ] Create lockfile fixture
 
 ## Phase 18 - Documentation
 
-- [ ] Write `docs/runtime/package-manager.md`
-- [ ] Write `docs/runtime/loader.md`
+- [x] Write `docs/runtime/package-manager.md`
+- [x] Write `docs/runtime/loader.md`
 - [ ] Write `docs/runtime/packages.md`
-- [ ] Write `docs/runtime/composer-bridge.md`
-- [ ] Write manifest field reference
-- [ ] Write lifecycle order docs
-- [ ] Write provider docs
-- [ ] Write preload docs
-- [ ] Write lazy resolver docs
-- [ ] Write module registry docs
-- [ ] Write security notes
-- [ ] Write package examples
-- [ ] Write install command docs
-- [ ] Write remove command docs
-- [ ] Write update command docs
-- [ ] Write lockfile docs
-- [ ] Write Composer install docs
-- [ ] Write Express-like package docs
-- [ ] Write CLI examples
-- [ ] Link docs from README
+- [x] Write `docs/runtime/composer-bridge.md`
+- [x] Write manifest field reference
+- [x] Write lifecycle order docs
+- [x] Write provider docs
+- [x] Write preload docs
+- [x] Write lazy resolver docs
+- [x] Write module registry docs
+- [x] Write security notes
+- [x] Write package examples
+- [x] Write install command docs
+- [x] Write remove command docs
+- [x] Write update command docs
+- [x] Write lockfile docs
+- [x] Write Composer install docs
+- [x] Write Express-like package docs
+- [x] Write CLI examples
+- [x] Link docs from README
 
 ## Phase 19 - Publish Readiness
 
 - [ ] Mark ROADMAP loader items done when implemented
-- [ ] Run PHP lint
-- [ ] Run loader unit tests
-- [ ] Run stateless smoke test
-- [ ] Run stateful HTTP smoke test
-- [ ] Run module fixture smoke test
-- [ ] Run package install fixture smoke test
+- [x] Run PHP lint
+- [x] Run loader unit tests
+- [x] Run stateless smoke test
+- [x] Run stateful HTTP smoke test
+- [x] Run module fixture smoke test
+- [x] Run package install fixture smoke test
 - [ ] Run lockfile restore smoke test
 - [ ] Run Composer bridge smoke test
-- [ ] Review public API names
-- [ ] Review namespace stability
-- [ ] Review manifest stability
-- [ ] Review docs completeness
+- [x] Review public API names
+- [x] Review namespace stability
+- [x] Review manifest stability
+- [x] Review docs completeness
 - [ ] Draft changelog loader section
 - [ ] Draft release note loader section
