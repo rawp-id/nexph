@@ -25,130 +25,130 @@ nexph module:list
 
 ## Phase 0 - Scope Lock
 
-- [ ] Bekukan fitur HTTP/WS/SSE selama loader dikerjakan
-- [ ] Loader tidak mengubah behavior runtime existing
-- [ ] Loader harus bisa off tanpa efek samping
-- [ ] Loader harus bisa jalan di stateless FPM
-- [ ] Loader harus bisa jalan di stateful CLI server
-- [ ] Composer Bridge harus opsional
-- [ ] Runtime package format harus sederhana dulu
-- [ ] Package manager harus jadi entry utama install package
-- [ ] Runtime loader hanya memuat package yang sudah resolved
-- [ ] Composer tidak boleh jadi dependency wajib
-- [ ] Composer package harus bisa dipasang lewat bridge
-- [ ] Native package harus jadi first-class package
-- [ ] Lockfile harus menjaga reproducible install
-- [ ] Framework pattern harus tetap bebas
-- [ ] Package sandbox research hanya desain awal
-- [ ] Semua error loader harus jelas
-- [ ] Semua perubahan harus punya test kecil
+- [x] Bekukan fitur HTTP/WS/SSE selama loader dikerjakan
+- [x] Loader tidak mengubah behavior runtime existing
+- [x] Loader harus bisa off tanpa efek samping
+- [x] Loader harus bisa jalan di stateless FPM
+- [x] Loader harus bisa jalan di stateful CLI server
+- [x] Composer Bridge harus opsional
+- [x] Runtime package format harus sederhana dulu
+- [x] Package manager harus jadi entry utama install package
+- [x] Runtime loader hanya memuat package yang sudah resolved
+- [x] Composer tidak boleh jadi dependency wajib
+- [x] Composer package harus bisa dipasang lewat bridge
+- [x] Native package harus jadi first-class package
+- [x] Lockfile harus menjaga reproducible install
+- [x] Framework pattern harus tetap bebas
+- [x] Package sandbox research hanya desain awal
+- [x] Semua error loader harus jelas
+- [x] Semua perubahan harus punya test kecil
 
 ## Phase 0.5 - Product Shape
 
-- [ ] Definisikan Nexph Package Manager
-- [ ] Definisikan Nexph Runtime Loader
-- [ ] Definisikan hubungan package manager ke loader
-- [ ] Definisikan hubungan package manager ke Composer Bridge
-- [ ] Definisikan hubungan package manager ke CLI
-- [ ] Definisikan project root detection
-- [ ] Definisikan app manifest root `nexph.json`
-- [ ] Definisikan app lockfile `nexph.lock`
-- [ ] Definisikan native install dir `nexph_modules/`
-- [ ] Definisikan local dev package dir `packages/`
-- [ ] Definisikan Composer install dir `vendor/`
-- [ ] Definisikan cache dir `.nexph/cache/`
-- [ ] Definisikan registry cache dir `.nexph/registry/`
-- [ ] Definisikan package source priority
-- [ ] Definisikan command naming convention
-- [ ] Definisikan package namespace convention
+- [x] Definisikan Nexph Package Manager
+- [x] Definisikan Nexph Runtime Loader
+- [x] Definisikan hubungan package manager ke loader
+- [x] Definisikan hubungan package manager ke Composer Bridge
+- [x] Definisikan hubungan package manager ke CLI
+- [x] Definisikan project root detection
+- [x] Definisikan app manifest root `nexph.json`
+- [x] Definisikan app lockfile `nexph.lock`
+- [x] Definisikan native install dir `nexph_modules/`
+- [x] Definisikan local dev package dir `packages/`
+- [x] Definisikan Composer install dir `vendor/`
+- [x] Definisikan cache dir `.nexph/cache/`
+- [x] Definisikan registry cache dir `.nexph/registry/`
+- [x] Definisikan package source priority
+- [x] Definisikan command naming convention
+- [x] Definisikan package namespace convention
 
 ## Phase 1 - Current Autoload Audit
 
-- [ ] Audit `backend-engine/autoload.php`
-- [ ] Audit `backend-engine/bin/nexph`
-- [ ] Audit `backend-engine/core/Runtime/CLI`
-- [ ] Audit `backend-engine/core/Support/Config.php`
-- [ ] Audit usage `require_once`
-- [ ] Audit usage `include`
-- [ ] Audit runtime bootstrap stateless
-- [ ] Audit runtime bootstrap stateful
-- [ ] Catat class path mapping saat ini
-- [ ] Catat file bootstrap wajib
-- [ ] Catat file yang bisa lazy-load
-- [ ] Catat file yang harus preload
-- [ ] Catat collision namespace potensial
-- [ ] Catat dependency ke Composer jika ada
+- [x] Audit `backend-engine/autoload.php`
+- [x] Audit `backend-engine/bin/nexph`
+- [x] Audit `backend-engine/core/Runtime/CLI`
+- [x] Audit `backend-engine/core/Support/Config.php`
+- [x] Audit usage `require_once`
+- [x] Audit usage `include`
+- [x] Audit runtime bootstrap stateless
+- [x] Audit runtime bootstrap stateful
+- [x] Catat class path mapping saat ini
+- [x] Catat file bootstrap wajib
+- [x] Catat file yang bisa lazy-load
+- [x] Catat file yang harus preload
+- [x] Catat collision namespace potensial
+- [x] Catat dependency ke Composer jika ada
 
 ## Phase 2 - Loader Boundary Design
 
-- [ ] Tentukan namespace loader
-- [ ] Tentukan folder `core/Runtime/Loader`
-- [ ] Tentukan public API loader
-- [ ] Tentukan internal class loader
-- [ ] Tentukan dependency loader ke `core/Support`
-- [ ] Tentukan dependency loader ke `core/Runtime`
-- [ ] Pastikan loader tidak tergantung `core/Server`
-- [ ] Pastikan loader tidak tergantung app routes
-- [ ] Pastikan loader tidak tergantung DB
-- [ ] Pastikan loader tidak tergantung session
-- [ ] Pastikan loader bisa dipakai CLI
-- [ ] Pastikan loader bisa dipakai FPM
+- [x] Tentukan namespace loader
+- [x] Tentukan folder `core/Runtime/Loader`
+- [x] Tentukan public API loader
+- [x] Tentukan internal class loader
+- [x] Tentukan dependency loader ke `core/Support`
+- [x] Tentukan dependency loader ke `core/Runtime`
+- [x] Pastikan loader tidak tergantung `core/Server`
+- [x] Pastikan loader tidak tergantung app routes
+- [x] Pastikan loader tidak tergantung DB
+- [x] Pastikan loader tidak tergantung session
+- [x] Pastikan loader bisa dipakai CLI
+- [x] Pastikan loader bisa dipakai FPM
 
 ## Phase 3 - Native Package Manifest Design
 
-- [ ] Pilih project manifest filename `nexph.json`
-- [ ] Pilih package manifest filename `nexph.json`
-- [ ] Bedakan project manifest dan package manifest
-- [ ] Definisikan field `name`
-- [ ] Definisikan field `version`
-- [ ] Definisikan field `type`
-- [ ] Definisikan field `description`
-- [ ] Definisikan field `autoload`
-- [ ] Definisikan field `preload`
-- [ ] Definisikan field `lazy`
-- [ ] Definisikan field `providers`
-- [ ] Definisikan field `routes`
-- [ ] Definisikan field `commands`
-- [ ] Definisikan field `hooks`
-- [ ] Definisikan field `config`
-- [ ] Definisikan field `requires`
-- [ ] Definisikan field `conflicts`
-- [ ] Definisikan field `sandbox`
-- [ ] Definisikan field `repositories`
-- [ ] Definisikan field `scripts`
-- [ ] Definisikan field `bin`
-- [ ] Definisikan field `license`
-- [ ] Definisikan field `authors`
-- [ ] Definisikan field `keywords`
-- [ ] Definisikan field `composer`
-- [ ] Definisikan minimal valid manifest
-- [ ] Definisikan full manifest example
-- [ ] Definisikan native library package example
-- [ ] Definisikan Express-like app package example
-- [ ] Definisikan route-only package example
-- [ ] Definisikan runtime-hook package example
-- [ ] Definisikan Composer-backed package example
-- [ ] Definisikan validation error format
-- [ ] Definisikan unknown field policy
+- [x] Pilih project manifest filename `nexph.json`
+- [x] Pilih package manifest filename `nexph.json`
+- [x] Bedakan project manifest dan package manifest
+- [x] Definisikan field `name`
+- [x] Definisikan field `version`
+- [x] Definisikan field `type`
+- [x] Definisikan field `description`
+- [x] Definisikan field `autoload`
+- [x] Definisikan field `preload`
+- [x] Definisikan field `lazy`
+- [x] Definisikan field `providers`
+- [x] Definisikan field `routes`
+- [x] Definisikan field `commands`
+- [x] Definisikan field `hooks`
+- [x] Definisikan field `config`
+- [x] Definisikan field `requires`
+- [x] Definisikan field `conflicts`
+- [x] Definisikan field `sandbox`
+- [x] Definisikan field `repositories`
+- [x] Definisikan field `scripts`
+- [x] Definisikan field `bin`
+- [x] Definisikan field `license`
+- [x] Definisikan field `authors`
+- [x] Definisikan field `keywords`
+- [x] Definisikan field `composer`
+- [x] Definisikan minimal valid manifest
+- [x] Definisikan full manifest example
+- [x] Definisikan native library package example
+- [x] Definisikan Express-like app package example
+- [x] Definisikan route-only package example
+- [x] Definisikan runtime-hook package example
+- [x] Definisikan Composer-backed package example
+- [x] Definisikan validation error format
+- [x] Definisikan unknown field policy
 
 ## Phase 3.5 - Lockfile Design
 
-- [ ] Pilih lockfile filename `nexph.lock`
-- [ ] Definisikan lockfile version
-- [ ] Definisikan package name record
-- [ ] Definisikan package version record
-- [ ] Definisikan package source record
-- [ ] Definisikan package dist URL record
-- [ ] Definisikan package checksum record
-- [ ] Definisikan dependency graph record
-- [ ] Definisikan resolved Composer packages record
-- [ ] Definisikan installed path record
-- [ ] Definisikan generated timestamp
-- [ ] Definisikan PHP version constraint record
-- [ ] Definisikan platform extensions record
-- [ ] Definisikan lockfile write strategy
-- [ ] Definisikan lockfile read strategy
-- [ ] Definisikan lockfile conflict behavior
+- [x] Pilih lockfile filename `nexph.lock`
+- [x] Definisikan lockfile version
+- [x] Definisikan package name record
+- [x] Definisikan package version record
+- [x] Definisikan package source record
+- [x] Definisikan package dist URL record
+- [x] Definisikan package checksum record
+- [x] Definisikan dependency graph record
+- [x] Definisikan resolved Composer packages record
+- [x] Definisikan installed path record
+- [x] Definisikan generated timestamp
+- [x] Definisikan PHP version constraint record
+- [x] Definisikan platform extensions record
+- [x] Definisikan lockfile write strategy
+- [x] Definisikan lockfile read strategy
+- [x] Definisikan lockfile conflict behavior
 - [ ] Test lockfile parse
 - [ ] Test lockfile write
 - [ ] Test lockfile missing package
@@ -177,7 +177,7 @@ nexph module:list
 - [x] Buat `RuntimeLoader`
 - [x] Buat `RuntimePreloader`
 - [x] Buat `LazyModuleResolver`
-- [ ] Buat `ModuleDependencyResolver`
+- [x] Buat `ModuleDependencyResolver`
 - [x] Buat `ModuleLoadException`
 - [x] Buat `ManifestValidationException`
 - [x] Buat `ModuleNotFoundException`
@@ -206,82 +206,82 @@ nexph module:list
 
 ## Phase 6 - Runtime Preload
 
-- [ ] Preload file list dari manifest
-- [ ] Preload class list dari manifest
-- [ ] Preload provider class
-- [ ] Preload command provider
-- [ ] Preload route provider
-- [ ] Deduplicate preload file
-- [ ] Detect missing preload file
-- [ ] Detect preload file outside package
-- [ ] Detect preload exception
-- [ ] Track preload duration
-- [ ] Track preload count
-- [ ] Expose preload stats
-- [ ] Test preload success
-- [ ] Test preload missing file
-- [ ] Test preload duplicate file
-- [ ] Test preload outside package blocked
+- [x] Preload file list dari manifest
+- [x] Preload class list dari manifest
+- [x] Preload provider class
+- [x] Preload command provider
+- [x] Preload route provider
+- [x] Deduplicate preload file
+- [x] Detect missing preload file
+- [x] Detect preload file outside package
+- [x] Detect preload exception
+- [x] Track preload duration
+- [x] Track preload count
+- [x] Expose preload stats
+- [x] Test preload success
+- [x] Test preload missing file
+- [x] Test preload duplicate file
+- [x] Test preload outside package blocked
 
 ## Phase 7 - Lazy Module Resolver
 
-- [ ] Build lazy map dari manifest
-- [ ] Resolve class to module
-- [ ] Resolve file to module
-- [ ] Resolve provider only when needed
-- [ ] Resolve route provider only when route layer asks
-- [ ] Resolve command provider only when CLI asks
-- [ ] Cache lazy map in memory
+- [x] Build lazy map dari manifest
+- [x] Resolve class to module
+- [x] Resolve file to module
+- [x] Resolve provider only when needed
+- [x] Resolve route provider only when route layer asks
+- [x] Resolve command provider only when CLI asks
+- [x] Cache lazy map in memory
 - [ ] Optional cache lazy map to file
-- [ ] Detect lazy target missing
-- [ ] Detect lazy collision
-- [ ] Track lazy hit count
-- [ ] Track lazy miss count
-- [ ] Expose lazy stats
-- [ ] Test lazy class resolve
-- [ ] Test lazy missing target
-- [ ] Test lazy collision
+- [x] Detect lazy target missing
+- [x] Detect lazy collision
+- [x] Track lazy hit count
+- [x] Track lazy miss count
+- [x] Expose lazy stats
+- [x] Test lazy class resolve
+- [x] Test lazy missing target
+- [x] Test lazy collision
 
 ## Phase 8 - Module Registry
 
-- [ ] Register module from path
-- [ ] Register module from manifest
-- [ ] Register multiple module paths
-- [ ] List registered modules
-- [ ] Get module by name
-- [ ] Check module enabled
-- [ ] Disable module
-- [ ] Enable module
-- [ ] Sort modules by dependency
-- [ ] Detect duplicate module name
-- [ ] Detect missing dependency
-- [ ] Detect version mismatch
-- [ ] Detect conflict
+- [x] Register module from path
+- [x] Register module from manifest
+- [x] Register multiple module paths
+- [x] List registered modules
+- [x] Get module by name
+- [x] Check module enabled
+- [x] Disable module
+- [x] Enable module
+- [x] Sort modules by dependency
+- [x] Detect duplicate module name
+- [x] Detect missing dependency
+- [x] Detect version mismatch
+- [x] Detect conflict
 - [ ] Export registry snapshot
 - [ ] Import registry snapshot
-- [ ] Expose registry stats
-- [ ] Test register one module
-- [ ] Test register multiple modules
-- [ ] Test duplicate module
-- [ ] Test dependency sort
-- [ ] Test conflict
+- [x] Expose registry stats
+- [x] Test register one module
+- [x] Test register multiple modules
+- [x] Test duplicate module
+- [x] Test dependency sort
+- [x] Test conflict
 
 ## Phase 9 - Runtime Package Discovery
 
-- [ ] Define app modules path `modules/`
-- [ ] Define vendor modules path `vendor/*/*`
-- [ ] Define local packages path `packages/`
-- [ ] Discover `nexph.json` in app modules
-- [ ] Discover `nexph.json` in packages
-- [ ] Discover `nexph.json` in vendor packages
-- [ ] Ignore disabled package
-- [ ] Ignore invalid package with report
-- [ ] Support explicit module path config
-- [ ] Support no module path gracefully
-- [ ] Test empty discovery
-- [ ] Test modules path discovery
-- [ ] Test packages path discovery
-- [ ] Test invalid package discovery
+- [x] Define app modules path `modules/`
+- [x] Define vendor modules path `vendor/*/*`
+- [x] Define local packages path `packages/`
+- [x] Discover `nexph.json` in app modules
+- [x] Discover `nexph.json` in packages
+- [x] Discover `nexph.json` in vendor packages
+- [x] Ignore disabled package
+- [x] Ignore invalid package with report
+- [x] Support explicit module path config
+- [x] Support no module path gracefully
+- [x] Test empty discovery
+- [x] Test modules path discovery
+- [x] Test packages path discovery
+- [x] Test invalid package discovery
 
 ## Phase 9.5 - Package Registry Protocol
 
@@ -325,43 +325,43 @@ nexph module:list
 
 ## Phase 10 - Composer Bridge Design
 
-- [ ] Define Composer bridge disabled mode
-- [ ] Define Composer bridge auto mode
-- [ ] Define Composer bridge required mode
-- [ ] Define `vendor/autoload.php` detection
-- [ ] Define `composer.json` detection
-- [ ] Define PSR-4 mapping behavior
-- [ ] Define `autoload.files` behavior
-- [ ] Define package metadata mapping
-- [ ] Define Composer package as module rule
-- [ ] Define native manifest priority
-- [ ] Define Composer fallback priority
-- [ ] Define bridge diagnostics
-- [ ] Define `composer:` package prefix
-- [ ] Define Composer install command strategy
-- [ ] Define Composer package lock sync
-- [ ] Define Composer library as non-runtime package by default
+- [x] Define Composer bridge disabled mode
+- [x] Define Composer bridge auto mode
+- [x] Define Composer bridge required mode
+- [x] Define `vendor/autoload.php` detection
+- [x] Define `composer.json` detection
+- [x] Define PSR-4 mapping behavior
+- [x] Define `autoload.files` behavior
+- [x] Define package metadata mapping
+- [x] Define Composer package as module rule
+- [x] Define native manifest priority
+- [x] Define Composer fallback priority
+- [x] Define bridge diagnostics
+- [x] Define `composer:` package prefix
+- [x] Define Composer install command strategy
+- [x] Define Composer package lock sync
+- [x] Define Composer library as non-runtime package by default
 
 ## Phase 11 - Composer Bridge Implementation
 
-- [ ] Buat `ComposerBridge`
-- [ ] Buat `ComposerInstaller`
-- [ ] Detect project composer root
-- [ ] Detect vendor autoload
-- [ ] Detect Composer binary
-- [ ] Run Composer install for `composer:` package
-- [ ] Run Composer require for `composer:` package
-- [ ] Require vendor autoload once
-- [ ] Parse root `composer.json`
-- [ ] Parse installed package metadata if available
-- [ ] Parse PSR-4 autoload
-- [ ] Parse files autoload
-- [ ] Map package name
-- [ ] Map package version
-- [ ] Convert Composer package to module metadata
-- [ ] Respect native `nexph.json` override
-- [ ] Expose bridge stats
-- [ ] Expose bridge diagnostics
+- [x] Buat `ComposerBridge`
+- [x] Buat `ComposerInstaller`
+- [x] Detect project composer root
+- [x] Detect vendor autoload
+- [x] Detect Composer binary
+- [x] Run Composer install for `composer:` package
+- [x] Run Composer require for `composer:` package
+- [x] Require vendor autoload once
+- [x] Parse root `composer.json`
+- [x] Parse installed package metadata if available
+- [x] Parse PSR-4 autoload
+- [x] Parse files autoload
+- [x] Map package name
+- [x] Map package version
+- [x] Convert Composer package to module metadata
+- [x] Respect native `nexph.json` override
+- [x] Expose bridge stats
+- [x] Expose bridge diagnostics
 - [ ] Test no composer
 - [ ] Test composer root exists
 - [ ] Test vendor autoload exists
@@ -476,28 +476,28 @@ nexph module:list
 
 ## Phase 16 - CLI Commands
 
-- [ ] Add `nexph install`
-- [ ] Add `nexph remove`
+- [x] Add `nexph install`
+- [x] Add `nexph remove`
 - [ ] Add `nexph update`
 - [ ] Add `nexph restore`
 - [ ] Add `nexph publish`
 - [ ] Add `nexph search`
 - [ ] Add `nexph package:info`
-- [ ] Add `nexph module:list`
+- [x] Add `nexph module:list`
 - [ ] Add `nexph module:info`
-- [ ] Add `nexph module:validate`
+- [x] Add `nexph module:validate`
 - [ ] Add `nexph module:discover`
 - [ ] Add `nexph module:preload`
 - [ ] Add `nexph package:init`
 - [ ] Add `nexph package:validate`
 - [ ] Add `nexph composer:bridge`
-- [ ] Add JSON output option
+- [x] Add JSON output option
 - [ ] Add quiet output option
-- [ ] Test module list
-- [ ] Test module validate
+- [x] Test module list
+- [x] Test module validate
 - [ ] Test package init
-- [ ] Test package install
-- [ ] Test package remove
+- [x] Test package install
+- [x] Test package remove
 - [ ] Test package update
 
 ## Phase 17 - Test Fixtures
