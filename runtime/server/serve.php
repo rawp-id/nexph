@@ -3,7 +3,7 @@
 // Nexph HTTP Server
 // Usage: php serve.php [--mode=http] [--host=0.0.0.0] [--port=8080] [--workers=auto] [--supervisor=on] [--object-tracking=off] [--pool-safety=off] [--max-deferred=100000] [--memory-pressure=0.85] [--memory-hard-pressure=0.95] [--graceful-timeout=30] [--max-connections=auto] [--backlog=auto] [--max-requests=auto] [--rate-limit=auto] [--websocket=off] [--ws-path=/ws] [--sse=off] [--sse-path=/events] [--sse-heartbeat=15] [--sse-timeout=300] [--debug]
 
-require_once __DIR__ . '/autoload.php';
+require_once __DIR__ . '/../../autoload.php';
 
 use Core\Server\HttpServer;
 use Core\Server\Router;
@@ -122,37 +122,18 @@ $poolSafety = optionEnabled($options['pool-safety'] ?? 'off');
 $debug = isset($options['debug']);
 
 // Load config
-Config::loadEnv(__DIR__ . '/.env');
-Config::load(__DIR__ . '/config/app.php');
+Config::loadEnv(BASE_PATH . '/.env');
+Config::load(BASE_PATH . '/config/app.php');
 
 // Boot module loader
 $runtimeLoader = null;
 $modulePaths = array_filter([
-    __DIR__ . '/nexph_modules',
-    __DIR__ . '/packages',
+    BASE_PATH . '/bags/local',
+    BASE_PATH . '/bags/installed',
+    BASE_PATH . '/modules',
+    BASE_PATH . '/nexph_modules',
 ], 'is_dir');
 if (!empty($modulePaths)) {
-    require_once __DIR__ . '/core/Runtime/Loader/Contracts/ModuleInterface.php';
-    require_once __DIR__ . '/core/Runtime/Loader/Contracts/ServiceProviderInterface.php';
-    require_once __DIR__ . '/core/Runtime/Loader/Contracts/RouteProviderInterface.php';
-    require_once __DIR__ . '/core/Runtime/Loader/Contracts/CommandProviderInterface.php';
-    require_once __DIR__ . '/core/Runtime/Loader/Contracts/HookProviderInterface.php';
-    require_once __DIR__ . '/core/Runtime/Loader/Contracts/ConfigProviderInterface.php';
-    require_once __DIR__ . '/core/Runtime/Loader/Contracts/PreloadableInterface.php';
-    require_once __DIR__ . '/core/Runtime/Loader/Contracts/BootableInterface.php';
-    require_once __DIR__ . '/core/Runtime/Loader/Contracts/ShutdownableInterface.php';
-    require_once __DIR__ . '/core/Runtime/Loader/Exceptions/ModuleLoadException.php';
-    require_once __DIR__ . '/core/Runtime/Loader/Exceptions/ManifestValidationException.php';
-    require_once __DIR__ . '/core/Runtime/Loader/Exceptions/ModuleNotFoundException.php';
-    require_once __DIR__ . '/core/Runtime/Loader/Exceptions/ModuleConflictException.php';
-    require_once __DIR__ . '/core/Runtime/Loader/ManifestParser.php';
-    require_once __DIR__ . '/core/Runtime/Loader/ManifestValidator.php';
-    require_once __DIR__ . '/core/Runtime/Loader/ModuleManifest.php';
-    require_once __DIR__ . '/core/Runtime/Loader/ModuleRegistry.php';
-    require_once __DIR__ . '/core/Runtime/Loader/RuntimePreloader.php';
-    require_once __DIR__ . '/core/Runtime/Loader/LazyModuleResolver.php';
-    require_once __DIR__ . '/core/Runtime/Loader/RuntimeLoader.php';
-
     $runtimeLoader = new RuntimeLoader();
     $runtimeLoader->discover($modulePaths);
     $runtimeLoader->boot();
@@ -200,7 +181,7 @@ if ($httpEnabled) {
     if ($dbConfig = Config::get('db')) {
         AsyncDatabase::connect($dbConfig);
     } else {
-        AsyncDatabase::connect(['driver' => 'sqlite', 'database' => __DIR__ . '/storage/database.sqlite']);
+        AsyncDatabase::connect(['driver' => 'sqlite', 'database' => BASE_PATH . '/storage/database.sqlite']);
     }
 }
 
@@ -219,7 +200,7 @@ if ($debug) {
 }
 
 if ($httpEnabled) {
-    $staticFiles = new StaticFiles(__DIR__ . '/public');
+    $staticFiles = new StaticFiles(BASE_PATH . '/public');
     $server->use(function ($request, $response) use ($staticFiles) {
         return $staticFiles($request, $response);
     });

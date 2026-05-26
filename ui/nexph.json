@@ -1,0 +1,20 @@
+{
+    "name": "nexph/ui",
+    "version": "0.1.0",
+    "type": "library",
+    "description": "Nexph Frontend Engine - Component compiler, builder, and dev tools",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Nexph\\": ""
+        }
+    },
+    "commands": {
+        "build": "Builder/BuildCommand.php",
+        "export": "Builder/ExportCommand.php",
+        "init": "Builder/InitCommand.php",
+        "pages": "Builder/PagesCommand.php",
+        "test": "Builder/TestCommand.php"
+    },
+    "requires": {}
+}
