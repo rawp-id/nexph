@@ -25,5 +25,12 @@
         "post-update-cmd": [
             "@php nexph help"
         ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "branch-alias": {
+            "dev-main": "0.1.x-dev"
+        }
     }
 }
