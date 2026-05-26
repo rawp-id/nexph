@@ -12,7 +12,7 @@ Tujuan: mengeluarkan isi penting dari `backend-engine/` dan `frontend-engine/` k
 - CLI utama ada di `bin/nexph`
 - Loader dan package manager masuk ke `src/Runtime`
 - Bootstrap runtime masuk ke `runtime/`
-- Package bawaan atau calon package masuk ke `packages/`
+- Package bawaan atau calon package masuk ke `bags/local/`
 - Demo/app code masuk ke `examples/`
 - Generated/runtime data tidak ikut publish
 - Migrasi bertahap, tidak destructive
@@ -48,11 +48,14 @@ nexph/
     DevTools/
     Plugin/
     Autoload/
-  packages/
-    auth/
+  bags/
+    local/
+      auth/
+      cache/
+      generator/
+      ui/
+    installed/
     cache/
-    generator/
-    ui/
   runtime/
     server/
     fpm/
@@ -64,7 +67,7 @@ nexph/
     backend/
     frontend/
     fullstack/
-    packages/
+    bags/
   scripts/
     benchmarks/
     smoke/
@@ -73,9 +76,8 @@ nexph/
     server/
     http/
     ui/
-    packages/
+    bags/
   modules/
-  nexph_modules/
   nexph.json
   nexph.lock
   README.md
@@ -130,20 +132,21 @@ nexph/
 - [x] Buat `runtime/server/`
 - [x] Buat `runtime/fpm/`
 - [x] Buat `runtime/workers/`
-- [x] Buat `packages/`
+- [x] Buat `bags/local/`
+- [x] Buat `bags/cache/`
 - [x] Buat `modules/`
-- [x] Buat `nexph_modules/`
+- [x] Buat `bags/installed/`
 - [x] Buat `scripts/benchmarks/`
 - [x] Buat `scripts/smoke/`
 - [x] Buat `examples/backend/`
 - [x] Buat `examples/frontend/`
 - [x] Buat `examples/fullstack/`
-- [x] Buat `examples/packages/`
+- [x] Buat `examples/bags/`
 - [x] Buat `tests/runtime/`
 - [x] Buat `tests/server/`
 - [x] Buat `tests/http/`
 - [x] Buat `tests/ui/`
-- [x] Buat `tests/packages/`
+- [x] Buat `tests/bags/`
 
 ## Phase 2 - Backend Runtime Mapping
 
@@ -178,10 +181,10 @@ Tasks:
 
 | From | To | Notes |
 |------|----|-------|
-| `backend-engine/core/Auth/` | `packages/auth/src/` | package candidate |
-| `backend-engine/core/Cache/` | `packages/cache/src/` | package candidate |
-| `backend-engine/core/Generator/` | `packages/generator/src/` | package candidate |
-| `backend-engine/core/UI/` | `packages/ui/src/` | package candidate or bridge |
+| `backend-engine/core/Auth/` | `bags/local/auth/src/` | package candidate |
+| `backend-engine/core/Cache/` | `bags/local/cache/src/` | package candidate |
+| `backend-engine/core/Generator/` | `bags/local/generator/src/` | package candidate |
+| `backend-engine/core/UI/` | `bags/local/ui/src/` | package candidate or bridge |
 
 Tasks:
 

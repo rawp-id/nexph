@@ -83,12 +83,12 @@ backend-engine/
   docs/
     runtime/
     cli/
-    packages/
+    bags/
   examples/
     http/
     websocket/
     sse/
-    packages/
+    bags/
   tests/
     Runtime/
     Server/

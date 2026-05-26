@@ -53,11 +53,11 @@ nexph module:list
 - [x] Definisikan project root detection
 - [x] Definisikan app manifest root `nexph.json`
 - [x] Definisikan app lockfile `nexph.lock`
-- [x] Definisikan native install dir `nexph_modules/`
-- [x] Definisikan local dev package dir `packages/`
+- [x] Definisikan native install dir `bags/installed/`
+- [x] Definisikan local dev package dir `bags/local/`
 - [x] Definisikan Composer install dir `vendor/`
-- [x] Definisikan cache dir `.nexph/cache/`
-- [x] Definisikan registry cache dir `.nexph/registry/`
+- [x] Definisikan cache dir `bags/cache/`
+- [x] Definisikan registry cache dir `bags/cache/registry/`
 - [x] Definisikan package source priority
 - [x] Definisikan command naming convention
 - [x] Definisikan package namespace convention
@@ -270,9 +270,9 @@ nexph module:list
 
 - [x] Define app modules path `modules/`
 - [x] Define vendor modules path `vendor/*/*`
-- [x] Define local packages path `packages/`
+- [x] Define local packages path `bags/local/`
 - [x] Discover `nexph.json` in app modules
-- [x] Discover `nexph.json` in packages
+- [x] Discover `nexph.json` in `bags/local`
 - [x] Discover `nexph.json` in vendor packages
 - [x] Ignore disabled package
 - [x] Ignore invalid package with report
@@ -280,7 +280,7 @@ nexph module:list
 - [x] Support no module path gracefully
 - [x] Test empty discovery
 - [x] Test modules path discovery
-- [x] Test packages path discovery
+- [x] Test `bags/local` path discovery
 - [x] Test invalid package discovery
 
 ## Phase 9.5 - Package Registry Protocol
@@ -398,7 +398,7 @@ nexph module:list
 - [ ] Implement dry-run mode
 - [ ] Implement no-scripts mode
 - [ ] Implement offline mode
-- [x] Install native package into `nexph_modules/`
+- [x] Install native package into `bags/installed/`
 - [ ] Install path package by symlink or copy
 - [x] Install Composer package into `vendor/`
 - [x] Update `nexph.json`
