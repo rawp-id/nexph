@@ -1,0 +1,12 @@
+{
+    "name": "nexph/support",
+    "version": "0.1.0",
+    "type": "runtime-module",
+    "description": "Nexph Support runtime module",
+    "autoload": {
+        "psr-4": {
+            "Core\\\\Support\\\\": "./"
+        }
+    },
+    "internal": true
+}

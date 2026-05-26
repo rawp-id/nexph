@@ -1,0 +1,12 @@
+{
+    "name": "nexph/database",
+    "version": "0.1.0",
+    "type": "runtime-module",
+    "description": "Nexph Database runtime module",
+    "autoload": {
+        "psr-4": {
+            "Core\\\\Database\\\\": "./"
+        }
+    },
+    "internal": true
+}

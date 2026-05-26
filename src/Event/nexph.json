@@ -1,0 +1,12 @@
+{
+    "name": "nexph/event",
+    "version": "0.1.0",
+    "type": "runtime-module",
+    "description": "Nexph Event runtime module",
+    "autoload": {
+        "psr-4": {
+            "Core\\\\Event\\\\": "./"
+        }
+    },
+    "internal": true
+}

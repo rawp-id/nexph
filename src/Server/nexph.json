@@ -1,0 +1,12 @@
+{
+    "name": "nexph/server",
+    "version": "0.1.0",
+    "type": "runtime-module",
+    "description": "Nexph Server runtime module",
+    "autoload": {
+        "psr-4": {
+            "Core\\\\Server\\\\": "./"
+        }
+    },
+    "internal": true
+}

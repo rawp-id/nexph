@@ -1,0 +1,12 @@
+{
+    "name": "nexph/queue",
+    "version": "0.1.0",
+    "type": "runtime-module",
+    "description": "Nexph Queue runtime module",
+    "autoload": {
+        "psr-4": {
+            "Core\\\\Queue\\\\": "./"
+        }
+    },
+    "internal": true
+}
