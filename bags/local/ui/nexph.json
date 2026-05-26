@@ -1,0 +1,13 @@
+{
+    "name": "nexph/ui",
+    "version": "0.1.0",
+    "type": "module",
+    "description": "Backend UI components and view layer",
+    "autoload": {
+        "psr-4": {
+            "Core\\UI\\": "src/"
+        }
+    },
+    "providers": [],
+    "requires": {}
+}

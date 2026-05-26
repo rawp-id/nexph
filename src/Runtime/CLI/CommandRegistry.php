@@ -74,5 +74,6 @@ class CommandRegistry {
         $this->register('remove', new PackageRemoveCommand());
         $this->register('module:list', new ModuleListCommand());
         $this->register('module:validate', new ModuleValidateCommand());
+        $this->register('module:info', new ModuleInfoCommand());
     }
 }

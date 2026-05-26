@@ -1,0 +1,14 @@
+{
+    "name": "nexph/cache",
+    "version": "0.1.0",
+    "type": "module",
+    "description": "Cache manager with APCu, file, and Redis drivers",
+    "autoload": {
+        "psr-4": {
+            "Core\\Cache\\": "src/"
+        }
+    },
+    "providers": [],
+    "config": {},
+    "requires": {}
+}

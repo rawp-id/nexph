@@ -12,7 +12,7 @@ The Nexph Runtime Loader discovers, validates, and boots modules from `nexph_mod
 
 ## Usage
 
-The loader boots automatically when `nexph_modules/` or `packages/` exist:
+The loader boots automatically when `bags/local/`, `bags/installed/`, or `modules/` exist:
 
 ```php
 // Stateful (serve.php) — automatic
@@ -20,12 +20,23 @@ The loader boots automatically when `nexph_modules/` or `packages/` exist:
 
 // Manual usage:
 $loader = new \Core\Runtime\Loader\RuntimeLoader();
-$loader->discover([__DIR__ . '/nexph_modules', __DIR__ . '/packages']);
+$loader->discover([__DIR__ . '/bags/local', __DIR__ . '/bags/installed', __DIR__ . '/modules']);
 $loader->boot();
 
 // Stats
 $stats = $loader->stats();
 ```
+
+## Directory Roles
+
+| Directory | Role | `nexph.json` | Auto-discovered |
+|-----------|------|-------------|----------------|
+| `src/` | Core internal | NO | NO |
+| `bags/local/` | Local dev packages | YES | YES |
+| `bags/installed/` | Registry-installed | YES | YES |
+| `modules/` | App-level modules | YES | YES |
+
+See [module-boundaries.md](module-boundaries.md) for full rules.
 
 ## Module Lifecycle
 

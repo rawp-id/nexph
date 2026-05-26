@@ -57,8 +57,10 @@ class ModuleListCommand extends Command
     {
         $root = defined('BASE_PATH') ? BASE_PATH : dirname(__DIR__, 3);
         $paths = [];
+        if (is_dir($root . '/bags/local')) $paths[] = $root . '/bags/local';
+        if (is_dir($root . '/bags/installed')) $paths[] = $root . '/bags/installed';
+        if (is_dir($root . '/modules')) $paths[] = $root . '/modules';
         if (is_dir($root . '/nexph_modules')) $paths[] = $root . '/nexph_modules';
-        if (is_dir($root . '/packages')) $paths[] = $root . '/packages';
         return $paths;
     }
 }

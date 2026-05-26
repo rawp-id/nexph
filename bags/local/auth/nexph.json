@@ -1,0 +1,15 @@
+{
+    "name": "nexph/auth",
+    "version": "0.1.0",
+    "type": "module",
+    "description": "Authentication, session management, and CSRF protection",
+    "autoload": {
+        "psr-4": {
+            "Core\\Auth\\": "src/"
+        }
+    },
+    "providers": [],
+    "routes": [],
+    "config": {},
+    "requires": {}
+}

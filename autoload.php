@@ -50,9 +50,10 @@ spl_autoload_register(function ($class) {
 // Boot loader for stateless FPM
 if (php_sapi_name() !== 'cli') {
     $loaderPaths = array_filter([
-        __DIR__ . '/nexph_modules',
-        __DIR__ . '/packages',
+        __DIR__ . '/bags/local',
+        __DIR__ . '/bags/installed',
         __DIR__ . '/modules',
+        __DIR__ . '/nexph_modules',
     ], 'is_dir');
 
     if (!empty($loaderPaths) && file_exists(__DIR__ . '/src/Runtime/Loader/RuntimeLoader.php')) {

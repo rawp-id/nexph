@@ -1,0 +1,13 @@
+{
+    "name": "nexph/generator",
+    "version": "0.1.0",
+    "type": "module",
+    "description": "API generator utilities",
+    "autoload": {
+        "psr-4": {
+            "Core\\Generator\\": "src/"
+        }
+    },
+    "providers": [],
+    "requires": {}
+}
