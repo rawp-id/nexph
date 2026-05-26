@@ -1,37 +1,62 @@
 # Nexph
 
-Workspace monorepo for Nexph runtime engines.
+Adaptive PHP runtime with native loader, package manager, HTTP/WS/SSE runtime, and UI compiler.
 
-## Engines
+## Install
 
-| Engine | Description |
-|--------|-------------|
-| [backend-engine](./backend-engine/) | Stateful PHP HTTP/WS/SSE server runtime |
-| [frontend-engine](./frontend-engine/) | PHP-to-static frontend compiler |
-
-## CLI
-
-Both engines share the `nexph` CLI name:
+Native:
 
 ```bash
-# Backend
-cd backend-engine
-php bin/nexph serve
-php bin/nexph run file.php
-php bin/nexph install nexph/auth
-
-# Frontend
-cd frontend-engine
-php bin/nexph build src/App.php
-php bin/nexph dev src/App.php
+curl -fsSL https://nexph.dev/install | sh
+nexph new my-app
+cd my-app
+nexph serve
 ```
 
-## Plans
+Composer global:
 
-- [ROADMAP.md](./ROADMAP.md) — Feature roadmap
-- [REPO_CLEANUP_PLAN.md](./REPO_CLEANUP_PLAN.md) — Repo restructuring plan
-- [LOADER_PLAN.md](./LOADER_PLAN.md) — Package manager & runtime loader plan
-- [AUDIT_REPORT.md](./AUDIT_REPORT.md) — Workspace audit results
+```bash
+composer global require nexph/nexph
+nexph new my-app
+cd my-app
+nexph serve
+```
+
+Composer project template:
+
+```bash
+composer create-project nexph/nexph-framework my-app
+cd my-app
+php nexph serve
+```
+
+Dev/no install:
+
+```bash
+php nexph help
+php nexph new my-app
+```
+
+## Layout
+
+```txt
+my-app/
+  nexph
+  nexph.json
+  src/
+  bags/
+    runtime/
+    local/
+    installed/
+    cache/
+```
+
+## Packages
+
+```bash
+nexph install nexph/auth
+nexph install composer:monolog/monolog
+```
 
 ## License
 

@@ -1,0 +1,179 @@
+#!/usr/bin/env php
+<?php
+/**
+ * Nexph CLI - Unified entry point
+ *
+ * Routes commands to:
+ * - Runtime (serve, run, runtime:*, queue:*, schedule:*)
+ * - Package Manager (install, remove, update, module:*)
+ * - Frontend (build, dev, export, init, test, pages)
+ * - Database (migrate:*)
+ */
+
+require_once __DIR__ . '/autoload.php';
+
+use Core\Runtime\CLI\CommandRegistry;
+
+$command = $argv[1] ?? 'help';
+$args = array_slice($argv, 2);
+
+// Route to appropriate handler
+$exitCode = match (true) {
+    // Project commands
+    $command === 'new' => runNew($args),
+
+    // Server commands
+    $command === 'serve' => runServe($args),
+    $command === 'run' => runFile($args),
+    $command === 'stop' => runStop($args),
+
+    // Frontend commands
+    in_array($command, ['build', 'dev', 'export', 'init', 'test', 'pages']) => runFrontend($command, $args),
+
+    // Migration commands
+    str_starts_with($command, 'migrate:'),
+    in_array($command, ['up', 'down', 'rollback', 'reset', 'refresh', 'make:migration']) => runMigration($command, $args),
+
+    // Package manager commands
+    in_array($command, ['install', 'remove', 'update', 'restore', 'publish', 'search']) => runRuntime($command, $args),
+    str_starts_with($command, 'package:') => runRuntime($command, $args),
+    str_starts_with($command, 'module:') => runRuntime($command, $args),
+
+    // Runtime CLI commands (queue:*, runtime:*, schedule:*, help)
+    default => runRuntime($command, $args),
+};
+
+exit($exitCode);
+
+function runNew(array $args): int
+{
+    $name = $args[0] ?? null;
+    if ($name === null || $name === '') {
+        fwrite(STDERR, "Usage: nexph new <app-name>\n");
+        return 1;
+    }
+    $target = getcwd() . DIRECTORY_SEPARATOR . $name;
+    if (file_exists($target)) {
+        fwrite(STDERR, "Error: target exists: {$target}\n");
+        return 1;
+    }
+    mkdir($target, 0775, true);
+    copyTree(__DIR__ . '/templates/app', $target);
+    mkdir($target . '/bags/runtime', 0775, true);
+    copyTree(__DIR__ . '/bags/runtime', $target . '/bags/runtime');
+    copy(__DIR__ . '/nexph', $target . '/nexph');
+    copy(__DIR__ . '/autoload.php', $target . '/autoload.php');
+    chmod($target . '/nexph', 0755);
+    $manifestPath = $target . '/nexph.json';
+    $manifest = json_decode(file_get_contents($manifestPath), true) ?: [];
+    $manifest['name'] = 'app/' . basename($name);
+    file_put_contents($manifestPath, json_encode($manifest, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) . "\n");
+    fwrite(STDOUT, "Created {$name}\n");
+    fwrite(STDOUT, "Next:\n  cd {$name}\n  php nexph serve\n");
+    return 0;
+}
+
+function copyTree(string $source, string $target): void
+{
+    if (!is_dir($source)) {
+        return;
+    }
+    if (!is_dir($target)) {
+        mkdir($target, 0775, true);
+    }
+    $items = scandir($source) ?: [];
+    foreach ($items as $item) {
+        if ($item === '.' || $item === '..') {
+            continue;
+        }
+        $from = $source . DIRECTORY_SEPARATOR . $item;
+        $to = $target . DIRECTORY_SEPARATOR . $item;
+        if (is_dir($from)) {
+            copyTree($from, $to);
+            continue;
+        }
+        copy($from, $to);
+    }
+}
+function runServe(array $args): int
+{
+    $mode = 'http';
+    foreach ($args as $arg) {
+        if (str_starts_with($arg, '--mode=')) {
+            $mode = substr($arg, 7);
+        }
+    }
+
+    $script = __DIR__ . '/bags/runtime/nexph-core/runtime/server/serve.php';
+    $cmd = PHP_BINARY . ' ' . escapeshellarg($script);
+    foreach ($args as $arg) {
+        $cmd .= ' ' . escapeshellarg($arg);
+    }
+
+    passthru($cmd, $exitCode);
+    return $exitCode;
+}
+
+function runFile(array $args): int
+{
+    if (empty($args)) {
+        fwrite(STDERR, "Usage: nexph run <file.php> [args...]\n");
+        return 1;
+    }
+
+    $file = array_shift($args);
+    if (!file_exists($file)) {
+        fwrite(STDERR, "Error: File not found: {$file}\n");
+        return 1;
+    }
+
+    // Set argv for the target script
+    $GLOBALS['argv'] = array_merge([$file], $args);
+    $GLOBALS['argc'] = count($GLOBALS['argv']);
+
+    try {
+        require_once $file;
+        return 0;
+    } catch (\Throwable $e) {
+        fwrite(STDERR, "Error: {$e->getMessage()}\n");
+        fwrite(STDERR, "  {$e->getFile()}:{$e->getLine()}\n");
+        return 1;
+    }
+}
+
+function runStop(array $args): int
+{
+    return runRuntime('runtime:stop', $args);
+}
+
+function runFrontend(string $command, array $args): int
+{
+    fwrite(STDERR, "Frontend command '{$command}' not yet integrated.\n");
+    return 1;
+}
+
+function runMigration(string $command, array $args): int
+{
+    fwrite(STDERR, "Migration command '{$command}' not yet integrated.\n");
+    return 1;
+}
+
+function runPackage(string $command, array $args): int
+{
+    // TODO: implement package manager commands
+    fwrite(STDERR, "Package command '{$command}' not yet implemented.\n");
+    return 1;
+}
+
+function runModule(string $command, array $args): int
+{
+    // TODO: implement module commands
+    fwrite(STDERR, "Module command '{$command}' not yet implemented.\n");
+    return 1;
+}
+
+function runRuntime(string $command, array $args): int
+{
+    $registry = new CommandRegistry();
+    return $registry->execute($command, $args);
+}

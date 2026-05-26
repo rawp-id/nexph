@@ -33,6 +33,9 @@ class HelpCommand extends Command {
         $this->output("");
         $this->output("Available Commands:");
         $this->output("");
+        $this->output("Project:");
+        $this->output("  " . str_pad("new", 20) . " Create a new Nexph app");
+        $this->output("");
         
         $commands = $this->registry->all();
         $groups = $this->groupCommands($commands);

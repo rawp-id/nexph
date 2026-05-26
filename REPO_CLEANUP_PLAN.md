@@ -228,7 +228,7 @@ Tasks:
 
 - [x] `autoload.php`
 - [x] `bin/nexph`
-- [x] `src/`
+- [x] `bags/runtime/nexph-core/src/`
 - [x] `tests/`
 - [x] `examples/`
 - [x] `README.md`

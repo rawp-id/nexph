@@ -1,0 +1,29 @@
+{
+    "name": "nexph/nexph",
+    "description": "Nexph adaptive PHP runtime, CLI, loader, and package manager",
+    "type": "library",
+    "license": "MIT",
+    "bin": [
+        "bin/nexph"
+    ],
+    "autoload": {
+        "files": [
+            "autoload.php"
+        ],
+        "psr-4": {
+            "Core\\": "bags/runtime/nexph-core/src/",
+            "Nexph\\": "bags/runtime/nexph-ui/src/"
+        }
+    },
+    "require": {
+        "php": ">=8.2"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@php nexph help"
+        ],
+        "post-update-cmd": [
+            "@php nexph help"
+        ]
+    }
+}

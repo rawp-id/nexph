@@ -1,0 +1,21 @@
+{
+    "name": "app/demo",
+    "version": "0.1.0",
+    "type": "app",
+    "description": "Nexph app",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "bags": {
+        "runtime": "bags/runtime",
+        "local": "bags/local",
+        "installed": "bags/installed",
+        "cache": "bags/cache"
+    },
+    "requires": [],
+    "scripts": {
+        "serve": "php nexph serve"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "nexph/ui-runtime",
+    "version": "0.1.0",
+    "type": "library",
+    "description": "Nexph UI runtime, compiler, builder, and dev tools",
+    "autoload": {
+        "psr-4": {
+            "Nexph\\\\": "src/"
+        }
+    },
+    "internal": true
+}

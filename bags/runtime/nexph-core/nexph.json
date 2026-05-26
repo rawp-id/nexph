@@ -1,0 +1,15 @@
+{
+    "name": "nexph/runtime",
+    "version": "0.1.0",
+    "type": "library",
+    "description": "Nexph core runtime, server, HTTP, DB, loader, queue, and process runtime",
+    "autoload": {
+        "psr-4": {
+            "Core\\\\": "src/"
+        }
+    },
+    "bin": {
+        "serve": "runtime/server/serve.php"
+    },
+    "internal": true
+}

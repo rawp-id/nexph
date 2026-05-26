@@ -7,8 +7,8 @@ Tujuan: mengeluarkan isi penting dari `backend-engine/` dan `frontend-engine/` k
 - Root adalah master Nexph runtime repo
 - Tidak pakai `core/Backend`
 - Tidak pakai `core/Frontend`
-- Backend/runtime core masuk ke `src/`
-- Frontend/UI/compiler runtime masuk ke `ui/`
+- Backend/runtime core masuk ke `bags/runtime/nexph-core/src/`
+- Frontend/UI/compiler runtime masuk ke `bags/runtime/nexph-ui/src/`
 - CLI utama ada di `bin/nexph`
 - Loader dan package manager masuk ke `src/Runtime`
 - Bootstrap runtime masuk ke `runtime/`
@@ -115,7 +115,7 @@ nexph/
 ## Phase 1 - Create Root Skeleton
 
 - [x] Buat `bin/`
-- [x] Buat `src/`
+- [x] Buat `bags/runtime/nexph-core/src/`
 - [x] Buat `src/Runtime/`
 - [x] Buat `src/Runtime/Loader/`
 - [x] Buat `src/Runtime/Package/`
@@ -127,7 +127,7 @@ nexph/
 - [x] Buat `src/Health/`
 - [x] Buat `src/Log/`
 - [x] Buat `src/Support/`
-- [x] Buat `ui/`
+- [x] Buat `bags/runtime/nexph-ui/src/`
 - [x] Buat `runtime/`
 - [x] Buat `runtime/server/`
 - [x] Buat `runtime/fpm/`
@@ -212,14 +212,14 @@ Tasks:
 
 Tasks:
 
-- [x] Copy frontend runtime to `ui/`
+- [x] Copy frontend runtime to `bags/runtime/nexph-ui/src/`
 - [x] Copy compiler to `ui/Compiler`
 - [x] Copy builder to `ui/Builder`
 - [x] Copy dev server to `ui/DevServer`
 - [x] Copy devtools to `ui/DevTools`
 - [x] Copy plugin system to `ui/Plugin`
 - [x] Copy frontend autoload to `ui/Autoload`
-- [x] Copy root frontend classes to `ui/`
+- [x] Copy root frontend classes to `bags/runtime/nexph-ui/src/`
 - [x] Run PHP lint on copied UI files
 - [x] Compare file counts
 
@@ -368,7 +368,7 @@ Tasks:
 - [x] Map `Core\Health` to `src/Health`
 - [x] Map `Core\Log` to `src/Log`
 - [x] Map `Core\Support` to `src/Support`
-- [x] Map `Nexph` UI namespace to `ui/`
+- [x] Map `Nexph` UI namespace to `bags/runtime/nexph-ui/src/`
 - [x] Add package loader later
 - [x] Keep Composer bridge optional
 - [x] Test class autoload
