@@ -8,6 +8,7 @@ abstract class Command {
     protected string $name = '';
     protected string $description = '';
     protected array $options = [];
+    protected bool $quiet = false;
     
     /**
      * Execute command.
@@ -58,6 +59,10 @@ abstract class Command {
             }
         }
         
+        if (isset($parsed['options']['quiet']) || isset($parsed['options']['q'])) {
+            $this->quiet = true;
+        }
+        
         return $parsed;
     }
     
@@ -65,6 +70,7 @@ abstract class Command {
      * Print output.
      */
     protected function output(string $message): void {
+        if ($this->quiet) return;
         echo $message . "\n";
     }
     
@@ -72,6 +78,7 @@ abstract class Command {
      * Print error.
      */
     protected function error(string $message): void {
+        if ($this->quiet) return;
         fwrite(STDERR, $message . "\n");
     }
 }

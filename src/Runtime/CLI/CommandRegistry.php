@@ -72,8 +72,18 @@ class CommandRegistry {
         $this->register('schedule:list', new ScheduleListCommand());
         $this->register('install', new PackageInstallCommand());
         $this->register('remove', new PackageRemoveCommand());
+        $this->register('update', new PackageUpdateCommand());
+        $this->register('restore', new PackageRestoreCommand());
+        $this->register('publish', new PackagePublishCommand());
+        $this->register('search', new PackageSearchCommand());
+        $this->register('package:info', new PackageInfoCommand());
+        $this->register('package:init', new PackageInitCommand());
+        $this->register('package:validate', new PackageValidateCommand());
         $this->register('module:list', new ModuleListCommand());
-        $this->register('module:validate', new ModuleValidateCommand());
         $this->register('module:info', new ModuleInfoCommand());
+        $this->register('module:validate', new ModuleValidateCommand());
+        $this->register('module:discover', new ModuleDiscoverCommand());
+        $this->register('module:preload', new ModulePreloadCommand());
+        $this->register('composer:bridge', new ComposerBridgeCommand());
     }
 }

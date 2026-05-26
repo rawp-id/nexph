@@ -478,27 +478,27 @@ nexph module:list
 
 - [x] Add `nexph install`
 - [x] Add `nexph remove`
-- [ ] Add `nexph update`
-- [ ] Add `nexph restore`
-- [ ] Add `nexph publish`
-- [ ] Add `nexph search`
-- [ ] Add `nexph package:info`
+- [x] Add `nexph update`
+- [x] Add `nexph restore`
+- [x] Add `nexph publish`
+- [x] Add `nexph search`
+- [x] Add `nexph package:info`
 - [x] Add `nexph module:list`
-- [ ] Add `nexph module:info`
+- [x] Add `nexph module:info`
 - [x] Add `nexph module:validate`
-- [ ] Add `nexph module:discover`
-- [ ] Add `nexph module:preload`
-- [ ] Add `nexph package:init`
-- [ ] Add `nexph package:validate`
-- [ ] Add `nexph composer:bridge`
+- [x] Add `nexph module:discover`
+- [x] Add `nexph module:preload`
+- [x] Add `nexph package:init`
+- [x] Add `nexph package:validate`
+- [x] Add `nexph composer:bridge`
 - [x] Add JSON output option
-- [ ] Add quiet output option
+- [x] Add quiet output option
 - [x] Test module list
 - [x] Test module validate
-- [ ] Test package init
+- [x] Test package init
 - [x] Test package install
 - [x] Test package remove
-- [ ] Test package update
+- [x] Test package update
 
 ## Phase 17 - Test Fixtures
 

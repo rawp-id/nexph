@@ -80,6 +80,9 @@ class HelpCommand extends Command {
     
     private function groupCommands(array $commands): array {
         $groups = [
+            'Package' => [],
+            'Module' => [],
+            'Composer' => [],
             'Queue' => [],
             'Runtime' => [],
             'Schedule' => [],
@@ -89,7 +92,13 @@ class HelpCommand extends Command {
         foreach ($commands as $command) {
             $name = $command->getName();
             
-            if (str_starts_with($name, 'queue:')) {
+            if (in_array($name, ['install', 'remove', 'update', 'restore', 'publish', 'search']) || str_starts_with($name, 'package:')) {
+                $groups['Package'][] = $command;
+            } elseif (str_starts_with($name, 'module:')) {
+                $groups['Module'][] = $command;
+            } elseif (str_starts_with($name, 'composer:')) {
+                $groups['Composer'][] = $command;
+            } elseif (str_starts_with($name, 'queue:')) {
                 $groups['Queue'][] = $command;
             } elseif (str_starts_with($name, 'runtime:')) {
                 $groups['Runtime'][] = $command;
